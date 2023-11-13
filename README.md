@@ -5,7 +5,7 @@
 - [Laura van Ekris](https://github.com/LauraVEkris)
 - [Vivian Speijer](https://github.com/happpy24)
 - [Tiana Stiekema](https://github.com/TianaS123)
-- [Ben Elshof](https://github.com/)
+- [Ben Elshof](https://github.com/Birdsyrup)
 
 ## Table of contents
 1. [Front-End](#Front-End)
