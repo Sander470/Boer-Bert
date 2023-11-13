@@ -1,4 +1,4 @@
-# Project Boer-Bert (HU-Y1B-CookieMonsters)
+# Project bos-mortuus (HU-Y1B-CookieMonsters)
 ### A simple environment for a campsite, its users and the employees.
 #### Created by Students at [Utrecht University of Applied Sciences](https://hu.nl):
 - [Sander Grootjans](https://github.com/Sander470)
