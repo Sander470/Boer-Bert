@@ -33,7 +33,10 @@
 
 
 ## Embedded Technology
-##### its still quite empty in here
+##### Ideas:
+- Sensor for outhouse to detect frequency of toilet use
+- Sensor or RFID/NFC for gate
+- Lamps that go on as you walk by
 
 
 ## List of useful links
