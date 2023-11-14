@@ -53,12 +53,12 @@
 
 ### TI: Ben
 
-**Document:
-**- Sensoren en actuatoren om de bezettingsgraad van verschillende voorzieningen te monitoren.
+**Document:**
+- Sensoren en actuatoren om de bezettingsgraad van verschillende voorzieningen te monitoren.
 - Beveiligde toegang tot de camping en faciliteiten.
 
-**Punten:
-**- Camerasysteem
+**Punten:**
+- Camerasysteem
 - NFC/Openalpr voor slagboom
 - NFC tags voor sleutels gasten
 - NFC tags voor sleutels personeel
