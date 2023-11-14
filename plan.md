@@ -1,6 +1,6 @@
 # Y1B - Boer Bert
-~~~~~~~~~~~~~~~~~~~~
-FE: Laura :3
+
+### FE: Laura :3
 
 Document:
 - Gasten moeten reserveringen kunnen maken, beschrikbaarheid controleren en betalingen uitvoeren
@@ -15,8 +15,8 @@ Designs voor:
 - Booking page
 - Contact/FAQ page
 - Administration page met Bookings, Edits, evt markdown via Backend voor snelle aanpassingen.
-~~~~~~~~~~~~~~~~~~~
-BE: Sander
+
+### BE: Sander
 
 Document:
 - De data moet opgeslagen worden in een database
@@ -26,8 +26,8 @@ Document:
 
 Punten:
 - Login, rechten en user/admin portals
-~~~~~~~~~~~~~~~~~~
-AI: Tiana
+
+### AI: Tiana
 
 Document:
 - Het zou mooi zijn als er een optimale plaatsbepaling is rekening houdend met verschillende type plaatsen.
@@ -38,8 +38,8 @@ Document:
 Punten:
 - Openalpr werkend krijgen (Check pinned messages)
 - Bijvoorbeeld Algoritmes schrijven voor optimale plaatsbepaling/looproute (google maps)
-~~~~~~~~~~~~~~~~~
-CSC: Vivian 
+
+### CSC: Vivian 
 
 Document:
 - Inrichten van een veilige infrastuctuur voor het beheersysteem, inclusief databeveiliging, authenticatie en back-up van gegevens.
@@ -48,8 +48,8 @@ Document:
 Punten:
 - WiFi netwerken, gast en personeel
 - Server voor web, database, AI systeem.
-~~~~~~~~~~~~~~~~
-TI: Ben
+
+### TI: Ben
 
 Document:
 - Sensoren en actuatoren om de bezettingsgraad van verschillende voorzieningen te monitoren.
@@ -60,10 +60,10 @@ Punten:
 - NFC/Openalpr voor slagboom
 - NFC tags voor sleutels gasten
 - NFC tags voor sleutels personeel
-~~~~~~~~~~
 
-# Stakeholders
-~~~~~~~~~
+
+## Stakeholders
+
 Gast
 - De gast wil gebruik maken van diensten en faciliteiten van de boerencamping.
 - De gast wil het systeem gebruiken voor een boeking voor een specifieke periode en gewenste accommodatie of kampeerplek.
