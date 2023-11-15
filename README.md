@@ -25,7 +25,9 @@
 
 
 ## Artificial Intelligence
-##### its still quite empty in here
+##### Ideas:
+- Chatbot
+- optimal location of caravans for guests
 
 
 ## Cyber Security and Cloud
