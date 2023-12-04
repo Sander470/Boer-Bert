@@ -20,7 +20,7 @@ Below you can see what colours have what use. First is the purpose of the colour
 ## Colour use
 Here, 'blocks' refers to the blocks of colour, or cards, seen on the site. Their purpose is to add a little more interesting and colourfull visuals to the site. 
 
-The background of the site is standard the off-white colour, but to add more variation longer pages have different backgrounds per section. One section is one topic.
+The background of the site is standard the off-white colour, but to add more variation pages have different backgrounds per section. One section is one topic.
 
 |    | **Background** | **Block** | **Text**  |
 |------------|----------------|-----------|-----------|
@@ -44,11 +44,8 @@ The background is an off-white, this is the standard colour.
 This colour refers to the review stars, that is the *only* place where this colour is used.
 
 ## Lay-out
-This part of the style guide will tell you about how to place the blocks.
+All topics are assigned to a section, as explained before these sections have diffrent background-colours. The title of a section is always in bold and what HTML calls font-size xx-large. All elements are borderless.
 
-### Design notes
-* Rounded corners
-* unaligned cards on the home page
-* light boxshadows
-* borderless
-* page title bold + xx-large
+The cards are rounded at the corners. the rounding depends on the size of the card and is based on view height, use 5svh for the correct rounding. All cards on the home page that are in a row horizontally have unalignment. Cards stay withing the same section and dont overlap. Forms and buttons are allowed to overlap.
+
+Cards, images and titles all have boxshadows of 2svh by 2svw with a colour of #07102630. This is a small box and even boxshadow with a very dark and low opacity blue.
