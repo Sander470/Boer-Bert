@@ -1,20 +1,27 @@
 # Style Guide
+This Guide will tell you all you need to know about the webdesign of camping Bos Mortuus. For this guide you will need a basic understanding of terms related to webdesign.
+
 ## Table of Contents
 1. [The colour palette](#the-colour-palette)
-2. [Blocks and text](#blocks-and-text)
-3. [Design notes](#Design-notes)
+2. [Colour use](#colour-use)
+3. [Lay out](#lay-out)
 
 ## The colour palette
-Main #80C87F (green)
+Below you can see what colours have what use. First is the purpose of the colour, then the RGB-code and last is the name of the colour as they are usually known. RGB-codes indicate the values of Red, Green and Blue in a colour.
 
-Secondary #1B525C (cyan)
+| Purpose    | RGB-code | Name        |
+|------------|----------|-------------|
+| Main       | #80C87F  | light green |
+| Secondary  | #1B525C  | cyan        |
+| Highlight  | #071026  | dark blue   |
+| Background | #FFFCEE  | off-white   |
+| Stars      | #FFDA84  | yellow      |
 
-Highlight #071026 (dark blue)
+## Colour use
+Here, 'blocks' refers to the blocks of colour, or cards, seen on the site. Their purpose is to add a little more interesting and colourfull visuals to the site. 
 
-Background #FFFCEE (off white)
+The background of the site is standard the off-white colour, but to add more variation longer pages have different backgrounds per section. One section is one topic.
 
-Stars #FFDA84 (yellow)
-## Blocks and text
 |    | **Background** | **Block** | **Text**  |
 |------------|----------------|-----------|-----------|
 | **blocks** | #1B525C        | #80C87F   | #1B525C   
@@ -25,9 +32,23 @@ Stars #FFDA84 (yellow)
 |       | #80C87F        |           | #1B525C   |
 |       | #FFFCEE        |           | #1B525C   |
 
-## Design notes
+### Main
+The main colour is used most on the site, if the is another colour background the first choice is the main colour. 
+### secondary
+The secondary colour is to be used as background when bordering the main colour. It is to balance out how bright the site is and is used only a little less than the main colour.
+### Highlight
+The highlight colour is used when there is an edge of the two colours that the elemnt overlaps with. This is for example the case with some buttons that are placed on edges to add dimention.
+### Background
+The background is an off-white, this is the standard colour.
+### Stars
+This colour refers to the review stars, that is the *only* place where this colour is used.
+
+## Lay-out
+This part of the style guide will tell you about how to place the blocks.
+
+### Design notes
 * Rounded corners
 * unaligned cards on the home page
 * light boxshadows
 * borderless
-* page title bold + size 50
+* page title bold + xx-large
