@@ -10,10 +10,10 @@
 <body>
     <div class="navbar">
         <img src="img/cowlogo.png">
-        <a href="_index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="#">Over ons</a>
         <a href="#">Activiteiten</a>
-        <a href="#">Reserveer</a>
+        <a href="book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
             <select class="dropdown" name="lang" id="lang">
