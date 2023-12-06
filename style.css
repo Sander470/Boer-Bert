@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 body {
@@ -28,10 +29,11 @@ body {
   justify-content: space-around;
   position: sticky;
   z-index: 2;
+  align-items: center;
 }
 
 .navbar img {
-  height: 5svh;
+  height: 8svh;
   width: auto;
 }
 
@@ -261,4 +263,31 @@ body {
   align-self: center;
   border-radius: 5svh;
   box-shadow: 2svh 2svh #07102630;
+}
+
+/* Booking pagina */
+.bookform{
+  height: 100svh;
+  width: 100%;
+  background-color: #80c87f;
+  display: flex;
+  justify-content: center;
+}
+.formB{
+  color: #1b525c;
+  display: grid;
+  width: 50%;
+  height:50%;
+  justify-content: center;
+  margin: 10svh;
+}
+.formB form{
+  display:grid;
+}
+
+.map img{
+  width: auto;
+  height: 80svh;
+  margin: 10svh;
+  border-radius: 5svh;
 }
