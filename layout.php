@@ -9,8 +9,8 @@
 
 <body>
     <div class="navbar">
-        <img src="Cow-logoReal.png">
-        <a href="_index.php">Home</a>
+        <img src="img/cowlogo.png">
+        <a href="_index.html">Home</a>
         <a href="#">Over ons</a>
         <a href="#">Activiteiten</a>
         <a href="#">Reserveer</a>
@@ -23,10 +23,6 @@
                 <option value="en">En</option>
             </select>
     </div>
-
-
-    <?php global $childView; include $childView; ?>
-
     <div class="footer">
         <div class="fcon">
             <svg height="100" width="5">
