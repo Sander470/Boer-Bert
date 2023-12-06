@@ -23,6 +23,9 @@
                 <option value="en">En</option>
             </select>
     </div>
+
+    <?php global $childView; include $childView ?>
+
     <div class="footer">
         <div class="fcon">
             <svg height="100" width="5">
