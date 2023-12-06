@@ -1,0 +1,6 @@
+
+
+
+astring = "Hello world!"
+
+    
