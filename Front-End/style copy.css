@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fffcee;
+  font-family: sans-serif;
+}
+
+/* The layout file */
+.navbar,
+.navbar a,
+.footer,
+.footer a {
+  color: #fffcee;
+  background-color: #1b525c;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar {
+  top: 0;
+  padding: 1.5svh;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  z-index: 2;
+  align-items: center;
+}
+
+.navbar img {
+  height: 8svh;
+  width: auto;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2svh;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.copyright {
+  bottom: 0;
+  font-size: x-small;
+  text-align: center;
+}
+
+.fcon {
+  display: flex;
+  flex-direction: row;
+  line-height: 100px;
+  justify-content: space-evenly;
+}
+
+.fcon line {
+  stroke: #fffcee;
+  stroke-width: 3;
+}
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.payimg img {
+  width: 10vh;
+  height: auto;
+}
+
+.dropdown {
+  width: 60px;
+  height: 30px;
+  border: none;
+  color: #1b525c;
+  background-color: #80c87f;
+  border-radius: 5px;
+  box-shadow: 4px 4px #00000070;
+  font-weight: bold;
+  font-size: medium;
+}
+
+/* Index page Hero*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Hero image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background: url(cowphoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Text on Hero */
+.hero-content {
+  position: top;
+  font-family: "Monserrat", sans-serif;
+  color: #1b525c;
+  text-align: center;
+  margin: 8svh;
+  z-index: 1;
+  padding: 3svh;
+  text-shadow: 0.5svh 0.5svh #07102630;
+}
+
+.hero-title {
+  font-size: 10svh;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 5svh;
+  font-weight: 200;
+  margin-top: 2.5svh;
+}
+
+/* General style other pages */
+.title {
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding-top: 2svh;
+  text-shadow: 0.5svh 0.5svh #07102630;
+}
+/* Booking form Home */
+.bookHome1 {
+  background-color: #80c87f;
+  display: grid;
+  justify-content: center;
+}
+.bookHome2 {
+  background-color: #1b525c;
+  color: #fffcee;
+  z-index: 1;
+  border-radius: 5svh;
+  height: 10svh;
+  width: 50svw;
+  display: flex;
+  justify-content:space-around;
+  padding: 2svh;
+  margin: 2svh;
+  box-shadow: 1svh 1svh #07102630;
+}
+.start, .end, .people{
+  display: grid;
+  width:25%;
+}
+/* information on the Home page*/
+.infoHome {
+  background-color: #80c87f;
+  color: #1b525c;
+  height: 100svh;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  align-content: space-evenly;
+  justify-content: space-between;
+}
+
+.card,
+.card2 {
+  background-color: #1b525c;
+  color: #fffcee;
+  padding: 2.5%;
+  margin: 5svh;
+  border-radius: 5svh;
+  height: 60svh;
+  width: 25%;
+  box-shadow: 2svh 2svh #07102630;
+}
+
+.card2 {
+  margin-top: 30svh;
+}
+
+/* reviews */
+.reviewHome {
+  background-color: #1b525c;
+  color: #80c87f;
+  height: 100svh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.HomeR {
+  display: grid;
+  justify-content: center;
+}
+
+.bigR {
+  background-color: #80c87f;
+  color: #1b525c;
+  align-self: center;
+  width: 50svw;
+  height: 30svh;
+  border-radius: 5svh;
+  box-shadow: 2svh 2svh #07102630;
+}
+
+.revsHome {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: end;
+}
+
+.revHome,
+.revHome2 {
+  background-color: #80c87f;
+  color: #1b525c;
+  height: 30svh;
+  width: 30svw;
+  margin: 2.5svh;
+  border-radius: 5svh;
+  box-shadow: 2svh 2svh #07102630;
+}
+
+.revHome2 {
+  margin-top: 20svh;
+}
+
+/* About Home */
+.aboutHome {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutHome img {
+  height: 75svh;
+  width: auto;
+  margin: 5svh;
+  align-self: center;
+  border-radius: 5svh;
+  box-shadow: 2svh 2svh #07102630;
+}
+
+.abHome {
+  background-color: #1b525c;
+  color: #fffcee;
+  height: 70svh;
+  width: 90svh;
+  align-self: center;
+  border-radius: 5svh;
+  box-shadow: 2svh 2svh #07102630;
+}
+
+/* Booking pagina */
+.bookform {
+  height: 100svh;
+  width: 100%;
+  background-color: #80c87f;
+  display: flex;
+  justify-content: center;
+}
+.formB {
+  color: #1b525c;
+  display: grid;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  margin: 10svh;
+}
+.formB form {
+  display: grid;
+}
+
+.map img {
+  width: auto;
+  height: 80svh;
+  margin: 10svh;
+  border-radius: 5svh;
+}
+
+.formB input[type="text"] {
+  background-color: #fffcee;
+  color: #1b525c;
+  font-size: medium;
+  border: none;
+  border-radius: 5svh;
+  width: 30svw;
+  height: 5svh;
+}
+
+.submit{
+  padding: 2svh;
+  margin: 1svh;
+  width: 10svw;
+  border-radius: 5svh;
+  justify-self: center;
+  border: none;
+  background-color: #071026;
+  color: #fffcee;
+  box-shadow: 1svh 1svh #07102630;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
