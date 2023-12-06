@@ -164,7 +164,7 @@ body {
   margin: 2svh;
   box-shadow: 1svh 1svh #07102630;
 }
-.start, .end, .people{
+.startDate, .endDate, .peopleAmount{
   display: grid;
   width:25%;
 }
