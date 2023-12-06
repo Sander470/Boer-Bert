@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <img src="Cow-logoReal.png">
-        <a href="_index.html">Home</a>
+        <a href="_index.php">Home</a>
         <a href="#">Over ons</a>
         <a href="#">Activiteiten</a>
         <a href="#">Reserveer</a>
@@ -23,6 +23,10 @@
                 <option value="en">En</option>
             </select>
     </div>
+
+
+    <?php include $childView; ?>
+
     <div class="footer">
         <div class="fcon">
             <svg height="100" width="5">
@@ -47,8 +51,8 @@
             <div class="pay">
                 <a href="#">Betaalmogelijkheden</a>
                 <div class="payimg">
-                    <img src="IDEAL_Logo.png" />
-                    <img src="PayPal-Logo-PNG.png" />
+                    <img src="img/IDEAL_Logo.png" />
+                    <img src="img/PayPal-Logo-PNG.png" />
                 </div>
             </div>
         </div>
