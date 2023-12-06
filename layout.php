@@ -25,7 +25,7 @@
     </div>
 
 
-    <?php include $childView; ?>
+    <?php global $childView; include $childView; ?>
 
     <div class="footer">
         <div class="fcon">

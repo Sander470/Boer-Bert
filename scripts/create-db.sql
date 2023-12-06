@@ -1,3 +1,9 @@
+# run from mysql CLI first before the rest:
+# 1: CREATE DATABASE IF NOT EXISTS `bos_mortuus`;
+# 2: grant ALL PRIVILEGES on bos_mortuus.* to admin@localhost IDENTIFIED BY 'B055MAN69';
+
+USE `bos_mortuus`;
+
 CREATE TABLE IF NOT EXISTS `employee` (
     id INT NOT NULL AUTO_INCREMENT,
     iban VARCHAR(50),
