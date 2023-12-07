@@ -16,7 +16,7 @@
         <a href="book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
-            <select class="dropdown" name="lang" id="lang">
+            <select class="dropdownlang" name="lang" id="lang">
                 <option selected value="ne">Ne</option>
                 <option value="du">De</option>
                 <option value="fr">Fr</option>
@@ -27,7 +27,7 @@
     <?php global $childView; include $childView ?>
 
     <div class="footer">
-        <div class="fcon">
+        <div class="footercontent">
             <svg height="100" width="5">
                 <line x1="0" y1="0" x2="0" y2="200" />
             </svg>

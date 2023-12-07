@@ -1,3 +1,11 @@
+:root{
+    --green: #80c87f;
+    --cyan: #1b525c;
+    --offwhite: #fffcee;
+    --dark: #071026;
+    --star: #FFDA84;
+    --shadow:#07102630;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,7 @@
 }
 
 body {
-  background-color: #fffcee;
+  background-color: var(--offwhite);
   font-family: sans-serif;
 }
 
@@ -15,8 +23,8 @@ body {
 .navbar a,
 .footer,
 .footer a {
-  color: #fffcee;
-  background-color: #1b525c;
+  color: var(--offwhite);
+  background-color: var(--cyan);
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -30,6 +38,7 @@ body {
   position: sticky;
   z-index: 5;
   align-items: center;
+  box-shadow:0 1svh var(--shadow) ;
 }
 
 .navbar img {
@@ -38,7 +47,7 @@ body {
 }
 
 .footer {
-  position:relative;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -55,15 +64,15 @@ body {
   text-align: center;
 }
 
-.fcon {
+.footercontent {
   display: flex;
   flex-direction: row;
   line-height: 100px;
   justify-content: space-evenly;
 }
 
-.fcon line {
-  stroke: #fffcee;
+.footercontent line {
+  stroke: var(--offwhite);
   stroke-width: 3;
 }
 
@@ -77,15 +86,15 @@ body {
   width: 5svh;
   height: auto;
 }
-
-.dropdown {
+/* language picker */
+.dropdownlang {
   width: 60px;
   height: 30px;
   border: none;
-  color: #1b525c;
-  background-color: #80c87f;
+  color: var(--cyan);
+  background-color: var(--green);
   border-radius: 5px;
-  box-shadow: 4px 4px #00000070;
+  box-shadow: 4px 4px var(--shadow);
   font-weight: bold;
   font-size: medium;
 }
@@ -118,12 +127,12 @@ body {
 .hero-content {
   position: top;
   font-family: "Monserrat", sans-serif;
-  color: #1b525c;
+  color: var(--cyan);
   text-align: center;
   margin: 8svh;
   z-index: 1;
   padding: 3svh;
-  text-shadow: 0.5svh 0.5svh #07102630;
+  text-shadow: 0.5svh 0.5svh var(--shadow);
 }
 
 .hero-title {
@@ -143,35 +152,41 @@ body {
   font-weight: bolder;
   font-size: xx-large;
   padding-top: 2svh;
-  text-shadow: 0.5svh 0.5svh #07102630;
+  text-shadow: 0.5svh 0.5svh var(--shadow);
 }
+
 /* Booking form Home */
 .bookHome1 {
-  background-color: #80c87f;
+  background-color: var(--green);
   display: grid;
   justify-content: center;
 }
+
 .bookHome2 {
-  background-color: #1b525c;
-  color: #fffcee;
+  background-color: var(--cyan);
+  color: var(--offwhite);
   z-index: 1;
   border-radius: 5svh;
   height: 10svh;
   width: 50svw;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 2svh;
   margin: 2svh;
-  box-shadow: 1svh 1svh #07102630;
+  box-shadow: 1svh 1svh var(--shadow);
 }
-.startDate, .endDate, .peopleAmount{
+
+.startDate,
+.endDate,
+.peopleAmount {
   display: grid;
-  width:25%;
+  width: 25%;
 }
-/* information on the Home page*/
+
+/* information Home*/
 .infoHome {
-  background-color: #80c87f;
-  color: #1b525c;
+  background-color: var(--green);
+  color: var(--cyan);
   height: 100svh;
   width: 100%;
 }
@@ -184,43 +199,43 @@ body {
 
 .card,
 .card2 {
-  background-color: #1b525c;
-  color: #fffcee;
+  background-color: var(--cyan);
+  color: var(--offwhite);
   padding: 2.5%;
   margin: 5svh;
   border-radius: 5svh;
   height: 60svh;
   width: 25%;
-  box-shadow: 2svh 2svh #07102630;
+  box-shadow: 2svh 2svh var(--shadow);
 }
 
 .card2 {
   margin-top: 30svh;
 }
 
-/* reviews */
+/* Reviews*/
 .reviewHome {
-  background-color: #1b525c;
-  color: #80c87f;
+  background-color: var(--cyan);
+  color: var(--green);
   height: 100svh;
   width: 100%;
   display: grid;
   justify-content: center;
 }
 
-.HomeR {
+.HomeReview {
   display: grid;
   justify-content: center;
 }
 
-.bigR {
-  background-color: #80c87f;
-  color: #1b525c;
+.bigReview {
+  background-color: var(--green);
+  color: var(--cyan);
   align-self: center;
   width: 50svw;
   height: 30svh;
   border-radius: 5svh;
-  box-shadow: 2svh 2svh #07102630;
+  box-shadow: 2svh 2svh var(--shadow);
 }
 
 .revsHome {
@@ -231,20 +246,20 @@ body {
 
 .revHome,
 .revHome2 {
-  background-color: #80c87f;
-  color: #1b525c;
+  background-color: var(--green);
+  color: var(--cyan);
   height: 30svh;
   width: 30svw;
   margin: 2.5svh;
   border-radius: 5svh;
-  box-shadow: 2svh 2svh #07102630;
+  box-shadow: 2svh 2svh var(--shadow);
 }
 
 .revHome2 {
   margin-top: 20svh;
 }
 
-/* About Home */
+/* About*/
 .aboutHome {
   width: 100%;
   height: 100svh;
@@ -258,49 +273,44 @@ body {
   margin: 5svh;
   align-self: center;
   border-radius: 5svh;
-  box-shadow: 2svh 2svh #07102630;
+  box-shadow: 2svh 2svh var(--shadow);
 }
 
-.abHome {
-  background-color: #1b525c;
-  color: #fffcee;
+.aboutCard {
+  background-color: var(--cyan);
+  color: var(--offwhite);
   height: 70svh;
   width: 90svh;
   align-self: center;
   border-radius: 5svh;
-  box-shadow: 2svh 2svh #07102630;
+  box-shadow: 2svh 2svh var(--shadow);
 }
 
 /* Booking pagina */
 .bookform {
   height: 100svh;
   width: 100%;
-  background-color: #80c87f;
+  background-color: var(--green);
   display: flex;
   justify-content: center;
 }
-.formB {
-  color: #1b525c;
+
+.bookingForm {
+  color: var(--cyan);
   display: grid;
   width: 50%;
   height: 50%;
   justify-content: center;
   margin: 10svh;
 }
-.formB form {
+
+.bookingForm form {
   display: grid;
 }
 
-.map img {
-  width: auto;
-  height: 80svh;
-  margin: 10svh;
-  border-radius: 5svh;
-}
-
-.formB input[type="text"] {
-  background-color: #fffcee;
-  color: #1b525c;
+.bookingForm input[type="text"] {
+  background-color: var(--offwhite);
+  color: var(--cyan);
   font-size: medium;
   border: none;
   border-radius: 5svh;
@@ -308,17 +318,27 @@ body {
   height: 5svh;
 }
 
-.submit{
+.map img {
+    width: auto;
+    height: 80svh;
+    margin: 10svh;
+    border-radius: 5svh;
+  }
+  
+.submit {
   padding: 2svh;
   margin: 1svh;
   width: 10svw;
   border-radius: 5svh;
   justify-self: center;
   border: none;
-  background-color: #071026;
-  color: #fffcee;
-  box-shadow: 1svh 1svh #07102630;
+  background-color: var(--dark);
+  color: var(--offwhite);
+  box-shadow: 1svh 1svh var(--shadow);
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+.submit:hover{
+    cursor: pointer;
 }
