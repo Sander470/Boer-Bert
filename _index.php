@@ -15,18 +15,17 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Bos Mortuus</h1>
-
             <h2 class="hero-subtitle">Vier vakantie met boer Bert!</h2>
         </div>
     </section>
     <form class="bookHome1">
         <div class="bookHome2">
             <div class="startDate">
-                <label for="start">Start:</label>
+                <label for="start">Aankomst:</label>
                 <input type="date" name="start" id="start">
             </div>
             <div class="endDate">
-                <label for="end">End:</label>
+                <label for="end">Vertrek:</label>
                 <input type="date" name="end" id="end">
             </div>
             <div class="peopleAmount">
@@ -34,7 +33,7 @@
                 <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="0">
             </div>
         </div>
-        <button class="submit" type="submit" href="book.html">Go!</button>
+        <button class="submit" type="submit">Go!</button>
     </form>
     <section class="infoHome">
         <div class="title">Informatie over de camping</div>
@@ -91,4 +90,3 @@
             </div>
         </div>
     </section>
-    n>
