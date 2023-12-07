@@ -1,0 +1,88 @@
+{
+  "questions": [
+    {
+      "question": "Hallo",
+      "answer": "Hoi!"
+    },
+    {
+      "question": "Hoe gaat het?",
+      "answer": "Het gaat goed, en met jou?"
+    },
+    {
+      "question": "Ook heel goed",
+      "answer": "Top!"
+    },
+    {
+      "question": "Welke activiteiten organiseert de camping voor gasten?",
+      "answer": "We hebben geplande wandeltochten, kampvuuravonden en een wekelijks barbecue-evenement."
+    },
+    {
+      "question": "Is er WiFi beschikbaar op de kampeerplekken?",
+      "answer": "Ja, we bieden WiFi op de camping. Het wachtwoord vindt u op de informatiebrochure bij het inchecken."
+    },
+    {
+      "question": "Zijn er specifieke regels met betrekking tot kampvuren op de camping?",
+      "answer": "Ja, er zijn aangewezen gebieden voor kampvuren. Zorg ervoor dat u zich aan de regels houdt en vraag bij de receptie naar brandhout."
+    },
+    {
+      "question": "Hoe kan ik contact opnemen met de campingbeheerder in geval van nood?",
+      "answer": "In geval van nood kunt u altijd de receptie bellen. Voor dringende zaken zijn we 24/7 bereikbaar."
+    },
+    {
+      "question": "Kan ik mijn eigen barbecue meenemen naar de kampeerplek?",
+      "answer": "Ja, u kunt uw eigen barbecue meenemen. Zorg ervoor dat u deze op een veilige afstand van de tenten plaatst."
+    },
+    {
+      "question": "Wat zijn de incheck- en uitchecktijden op de camping?",
+      "answer": "De inchecktijd is vanaf 14:00 uur en de uitchecktijd is uiterlijk 11:00 uur."
+    },
+    {
+      "question": "Zijn er specifieke regels voor het gebruik van het zwembad?",
+      "answer": "Ja, het zwembad heeft specifieke openingstijden en er gelden regels voor veiligheid en hygi\u00c3\u00abne."
+    },
+    {
+      "question": "Zijn er supermarkten of winkels in de buurt van de camping?",
+      "answer": "Ja, er zijn supermarkten en winkels op korte afstand van de camping. We kunnen u voorzien van een lijst met aanbevolen winkels."
+    },
+    {
+      "question": "Zijn er recreatieve activiteiten voor kinderen op de camping?",
+      "answer": "Ja, we hebben speelvoorzieningen en organiseren speciale activiteiten voor kinderen. Bekijk onze evenementenkalender voor meer informatie."
+    },
+    {
+      "question": "Zijn er wasfaciliteiten op de camping?",
+      "answer": "Ja, we hebben wasfaciliteiten met wasmachines en drogers voor gasten."
+    },
+    {
+      "question": "Is er brandhout beschikbaar voor kampvuren, of moeten we ons eigen meenemen?",
+      "answer": "We bieden brandhout aan voor kampvuren. U kunt het bij de receptie aanschaffen."
+    },
+    {
+      "question": "Kunnen we activiteiten op de camping van tevoren reserveren?",
+      "answer": "Ja, u kunt activiteiten vooraf reserveren via ons online portaal of bij de receptie bij aankomst."
+    },
+    {
+      "question": "Zijn er speciale kortingen beschikbaar voor kinderen of senioren?",
+      "answer": "Ja, we bieden kortingen voor kinderen en senioren. Informeer bij de receptie voor de actuele prijzen en kortingen."
+    },
+    {
+      "question": "Zijn er georganiseerde excursies naar nabijgelegen bezienswaardigheden?",
+      "answer": "Ja, we organiseren excursies naar nabijgelegen bezienswaardigheden. Informeer bij de receptie voor het huidige excursieaanbod."
+    },
+    {
+      "question": "Zijn er speciale evenementen of thema-avonden tijdens ons verblijf?",
+      "answer": "Ja, we organiseren regelmatig thema-avonden en evenementen op de camping. Bekijk onze evenementenkalender voor meer informatie."
+    },
+    {
+      "question": "hoi",
+      "answer": "hallo!"
+    },
+    {
+      "question": "zijn er toiletten",
+      "answer": "jazeker, er zijn er op dit moment 9 op de camping."
+    },
+    {
+      "question": "is er een zwembad",
+      "answer": "ja er is een zwembad"
+    }
+  ]
+}
