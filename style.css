@@ -30,6 +30,7 @@ body {
   position: sticky;
   z-index: 5;
   align-items: center;
+  box-shadow:0 1svh #07102630 ;
 }
 
 .navbar img {
@@ -38,7 +39,7 @@ body {
 }
 
 .footer {
-  position:relative;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -85,7 +86,7 @@ body {
   color: #1b525c;
   background-color: #80c87f;
   border-radius: 5px;
-  box-shadow: 4px 4px #00000070;
+  box-shadow: 4px 4px #07102630;
   font-weight: bold;
   font-size: medium;
 }
@@ -145,12 +146,14 @@ body {
   padding-top: 2svh;
   text-shadow: 0.5svh 0.5svh #07102630;
 }
+
 /* Booking form Home */
 .bookHome1 {
   background-color: #80c87f;
   display: grid;
   justify-content: center;
 }
+
 .bookHome2 {
   background-color: #1b525c;
   color: #fffcee;
@@ -159,15 +162,19 @@ body {
   height: 10svh;
   width: 50svw;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 2svh;
   margin: 2svh;
   box-shadow: 1svh 1svh #07102630;
 }
-.startDate, .endDate, .peopleAmount{
+
+.startDate,
+.endDate,
+.peopleAmount {
   display: grid;
-  width:25%;
+  width: 25%;
 }
+
 /* information on the Home page*/
 .infoHome {
   background-color: #80c87f;
@@ -279,6 +286,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .formB {
   color: #1b525c;
   display: grid;
@@ -287,6 +295,7 @@ body {
   justify-content: center;
   margin: 10svh;
 }
+
 .formB form {
   display: grid;
 }
@@ -308,7 +317,7 @@ body {
   height: 5svh;
 }
 
-.submit{
+.submit {
   padding: 2svh;
   margin: 1svh;
   width: 10svw;
