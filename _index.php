@@ -14,8 +14,8 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Bos Mortuus</h1>
-            <h2 class="hero-subtitle">Vier vakantie met boer Bert!</h2>
+            <p class="hero-title">Bos Mortuus</p>
+            <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
         </div>
     </section>
     <form class="bookHome1">
@@ -54,9 +54,9 @@
     </section>
     <section>
         <div class="reviewHome">
-            <div class="HomeR">
+            <div class="HomeReview">
                 <div class="title">Reviews</div>
-                <div class="bigR">
+                <div class="bigReview">
                     <div class="bigStar"></div>
                     <div class="bigName"></div>
                     <div class="bigText"></div>
@@ -84,7 +84,7 @@
     <section>
         <div class="aboutHome">
             <img src="img/BoerBert.jpeg">
-            <div class="abHome" onclick="location.href='#'">
+            <div class="aboutCard" onclick="location.href='#'">
                 <div class="title">Over ons</div>
                 <div class="abtext"></div>
             </div>

@@ -10,7 +10,7 @@
 
 <body>
     <section class="bookform">
-        <div class="formB">
+        <div class="bookingForm">
             <div class="title">Reserveren</div>
             <form>
                 <label for="name">Naam:</label>
