@@ -17,10 +17,10 @@
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
             <select class="dropdownlang" name="lang" id="lang">
-                <option selected value="ne">Ne</option>
-                <option value="du">De</option>
-                <option value="fr">Fr</option>
-                <option value="en">En</option>
+                <option selected value="ne">NL</option>
+                <option value="du">DE</option>
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
             </select>
     </div>
 

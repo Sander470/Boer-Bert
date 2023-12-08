@@ -18,22 +18,22 @@
             <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
         </div>
     </section>
-    <form class="bookHome1">
+    <form class="bookHome1" action="book.php">
         <div class="bookHome2">
             <div class="startDate">
                 <label for="start">Aankomst:</label>
-                <input type="date" name="start" id="start">
+                <input type="date" name="start" id="bookstart">
             </div>
             <div class="endDate">
                 <label for="end">Vertrek:</label>
-                <input type="date" name="end" id="end">
+                <input type="date" name="end" id="bookend">
             </div>
             <div class="peopleAmount">
                 <label for="quantity">Hoeveel mensen:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="0">
+                <input type="number" id="bookquantity" name="quantity" min="1" max="10" placeholder="0">
             </div>
         </div>
-        <button class="submit" type="submit">Go!</button>
+        <button class="submit" type="submit" >Go!</button>
     </form>
     <section class="infoHome">
         <div class="title">Informatie over de camping</div>
