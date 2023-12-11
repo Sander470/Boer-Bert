@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/bos-mortuus/website/img/cowlogo.png"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -50,8 +51,8 @@
             <div class="pay">
                 <a href="#">Betaalmogelijkheden</a>
                 <div class="payimg">
-                    <img src="img/IDEAL_Logo.png" />
-                    <img src="img/PayPal-Logo-PNG.png" />
+                    <img src="/bos-mortuus/website/img/IDEAL_Logo.png" />
+                    <img src="/bos-mortuus/website/img/PayPal-Logo-PNG.png" />
                 </div>
             </div>
         </div>
