@@ -18,7 +18,7 @@
             <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
         </div>
     </section>
-    <form class="bookHome1" action="book.php">
+    <form class="bookHome1" action="book/book.php">
         <div class="bookHome2">
             <div class="startDate">
                 <label for="start">Aankomst:</label>

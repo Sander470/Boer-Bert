@@ -9,11 +9,11 @@
 
 <body>
     <div class="navbar">
-        <img src="img/cowlogo.png">
-        <a href="index.php">Home</a>
+        <img src="/bos-mortuus/website/img/cowlogo.png" alt="Logo">
+        <a href="/bos-mortuus/website/index.php">Home</a>
         <a href="#">Over ons</a>
         <a href="#">Activiteiten</a>
-        <a href="book.php">Reserveer</a>
+        <a href="/bos-mortuus/website/book/book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
             <select class="dropdownlang" name="lang" id="lang">
