@@ -49,7 +49,7 @@
 
                 <label>Tent opzet service:</label>
                 <input type="checkbox" />
-                <input class="submit" type="submit" />
+                <input class="submit" type="submit"/>
             </form>
             <script>
                 document.getElementById('start').value = start;
@@ -60,6 +60,12 @@
         <div class="map">
             <img src="../img/BoerBert.jpeg" />
         </div>
+    </section>
+    <section class="cart" id="cart">
+            <div class="Bookoptions">
+                <p>Opties</p>
+            </div>
+            <div class="Bookcart"></div>
     </section>
 </body>
 

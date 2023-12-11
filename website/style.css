@@ -343,3 +343,22 @@ body {
     cursor: pointer;
     transform: translateY(-3px);
 }
+
+/* The shopping cart */
+.cart{
+    display: flex;
+    background-color: var(--offwhite);
+    height: 100svh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Bookcart{
+    background-color: var(--green);
+    color: var(--cyan);
+    height: 70svh;
+    width: 90svh;
+    align-self: center;
+    border-radius: 5svh;
+    box-shadow: 2svh 2svh var(--shadow);
+}
