@@ -52,11 +52,6 @@
                 <input class="submit" type="submit" />
             </form>
             <script>
-                const start = '<?php echo htmlspecialchars($_GET['start']); ?>';
-                const end = '<?php echo htmlspecialchars($_GET['end']); ?>';
-                const quantity = '<?php echo htmlspecialchars($_GET['quantity']); ?>';
-
-
                 document.getElementById('start').value = start;
                 document.getElementById('end').value = end;
                 document.getElementById('quantity').value = quantity;
