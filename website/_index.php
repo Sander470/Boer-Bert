@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>
-        <?php global $title;
-        echo $title; ?>
-    </title>
-</head>
-
 <body>
     <section class="hero">
         <div class="hero-content">
+            <img class="hero-img" src="wwwroot/img/cowphoto.jpg">
             <p class="hero-title">Bos Mortuus</p>
             <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
+            
         </div>
     </section>
     <form class="bookHome1" action="book/book.php">
@@ -83,7 +72,7 @@
     </section>
     <section>
         <div class="aboutHome">
-            <img src="img/BoerBert.jpeg">
+            <img src="wwwroot/img/BoerBert.jpeg">
             <div class="aboutCard" onclick="location.href='#'">
                 <div class="title">Over ons</div>
                 <div class="abtext"></div>

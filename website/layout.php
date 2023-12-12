@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="/bos-mortuus/website/img/cowlogo.png"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><?php global $title; echo $title; ?></title>
+    <link rel="stylesheet" href="wwwroot/css/style.css" />
+    <link rel="icon" href="wwwroot/img/cowlogo.ico"/>
 </head>
 
 <body>
     <div class="navbar">
-        <img src="/bos-mortuus/website/img/cowlogo.png" alt="Logo">
-        <a href="/bos-mortuus/website/index.php">Home</a>
+        <img src="wwwroot/img/main/cowlogo.png" alt="Logo">
+        <a href="index.php">Home</a>
         <a href="#">Over ons</a>
         <a href="#">Activiteiten</a>
-        <a href="/bos-mortuus/website/book/book.php">Reserveer</a>
+        <a href="book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
             <select class="dropdownlang" name="lang" id="lang">
-                <option selected value="ne">NL</option>
+                <option selected value="nl">NL</option>
                 <option value="du">DE</option>
                 <option value="fr">FR</option>
                 <option value="en">EN</option>
@@ -51,8 +52,8 @@
             <div class="pay">
                 <a href="#">Betaalmogelijkheden</a>
                 <div class="payimg">
-                    <img src="/bos-mortuus/website/img/IDEAL_Logo.png" />
-                    <img src="/bos-mortuus/website/img/PayPal-Logo-PNG.png" />
+                    <img src="wwwroot/img/main/IDEAL_Logo.png" />
+                    <img src="wwwroot/img/main/PayPal-Logo-PNG.png" />
                 </div>
             </div>
         </div>
