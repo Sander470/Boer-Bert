@@ -9,10 +9,27 @@
     <link rel="stylesheet" href="wwwroot/css/style.css" />
     <link rel="icon" href="wwwroot/img/cowlogo.ico" />
 
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Vier vakantie met Boer Bert!
+De vakantieplek voor vrienden en familie!">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://dev.bosmortuus.nl">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Bos Mortuus - Development Branch">
-    <meta property="og:description" content="Vier vakantie met Boer Bert!<br> <br>De vakantieplek voor vrienden en familie!">
+    <meta property="og:description" content="Vier vakantie met Boer Bert!
+De vakantieplek voor vrienden en familie!">
     <meta property="og:image" content="https://dev.bosmortuus.nl/wwwroot/img/main/cowlogo.png">
-    <meta property="og:url" content="https://dev.bosmortuus.nl/">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="dev.bosmortuus.nl">
+    <meta property="twitter:url" content="https://dev.bosmortuus.nl">
+    <meta name="twitter:title" content="Bos Mortuus - Development Branch">
+    <meta name="twitter:description" content="Vier vakantie met Boer Bert!
+De vakantieplek voor vrienden en familie!">
+    <meta name="twitter:image" content="https://dev.bosmortuus.nl/wwwroot/img/main/cowlogo.png">
+
 </head>
 
 <body>
