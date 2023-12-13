@@ -7,7 +7,7 @@
             
         </div>
     </section>
-    <form class="bookHome1" action="book/book.php">
+    <form class="bookHome1" action="book.php">
         <div class="bookHome2">
             <div class="startDate">
                 <label for="start">Aankomst:</label>
