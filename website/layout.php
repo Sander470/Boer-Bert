@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="wwwroot/css/style.css" />
     <link rel="icon" href="wwwroot/img/cowlogo.ico" />
 
-    <meta property="og:title" content="Bos Mortuus">
-    <meta property="og:description" content="Vier vakantie met Boer Bert!<br><br>De vakantieplek voor vrienden en familie!">
-    <meta property="og:image" content="wwwroot/img/main/cowlogo.png">
-    <meta property="og:url" content="https://www.bosmortuus.nl/">
+    <meta property="og:title" content="Bos Mortuus - Development Branch">
+    <meta property="og:description" content="Vier vakantie met Boer Bert!<br> <br>De vakantieplek voor vrienden en familie!">
+    <meta property="og:image" content="https://dev.bosmortuus.nl/wwwroot/img/main/cowlogo.png">
+    <meta property="og:url" content="https://dev.bosmortuus.nl/">
 </head>
 
 <body>
