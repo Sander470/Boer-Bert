@@ -13,28 +13,28 @@
                 <label for="caravan">Caravan:</label>
                 <input type="checkbox" id="caravan" name="caravan" />
 
-                <label for="quantity">Aantal personen:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="0" />
-                <?php if (isset($quantity)) { ?>
-                    <input type="hidden" id="quantity" name="quantity" value="<?php echo htmlspecialchars($_GET['quantity']); ?>">
-                <?php } elseif (empty($quantity)) { ?>
-                    <input type="hidden" id="quantity" name="quantity" value="">
+                <label for="bookQuantity">Aantal personen:</label>
+                <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0" />
+                <?php if (isset($bookQuantity)) { ?>
+                    <input type="hidden" id="bookQuantity" name="bookQuantity" value="<?php echo htmlspecialchars($_GET['bookQuantity']); ?>">
+                <?php } elseif (empty($bookQuantity)) { ?>
+                    <input type="hidden" id="bookQuantity" name="bookQuantity" value="">
                 <?php } ?>
 
-                <label for="start">Aankomst:</label>
-                <input type="date" name="start" id="start" required>
-                <?php if (isset($start)) { ?>
-                    <input type="hidden" id="start" name="start" value="<?php echo htmlspecialchars($_GET['start']); ?>">
-                <?php } elseif (empty($start)) { ?>
-                    <input type="hidden" id="start" name="start" value="">
+                <label for="bookStart">Aankomst:</label>
+                <input type="date" name="bookStart" id="bookStart" required>
+                <?php if (isset($bookStart)) { ?>
+                    <input type="hidden" id="bookStart" name="bookStart" value="<?php echo htmlspecialchars($_GET['bookStart']); ?>">
+                <?php } elseif (empty($bookStart)) { ?>
+                    <input type="hidden" id="bookStart" name="bookStart" value="">
                 <?php } ?>
 
-                <label for="end">Vertrek:</label>
-                <input type="date" name="end" id="end" required>
-                <?php if (isset($end)) { ?>
-                    <input type="hidden" id="end" name="end" value="<?php echo htmlspecialchars($_GET['end']); ?>">
-                <?php } elseif (empty($end)) { ?>
-                    <input type="hidden" id="end" name="end" value="">
+                <label for="bookEnd">Vertrek:</label>
+                <input type="date" name="bookEnd" id="bookEnd" required>
+                <?php if (isset($bookEnd)) { ?>
+                    <input type="hidden" id="bookEnd" name="bookEnd" value="<?php echo htmlspecialchars($_GET['bookEnd']); ?>">
+                <?php } elseif (empty($bookEnd)) { ?>
+                    <input type="hidden" id="bookEnd" name="bookEnd" value="">
                 <?php } ?>
 
                 <label>Tent opzet service:</label>
@@ -42,9 +42,9 @@
                 <input class="submit" type="submit" />
             </form>
             <script>
-                document.getElementById('start').value = start;
-                document.getElementById('end').value = end;
-                document.getElementById('quantity').value = quantity;
+                document.getElementById('bookStart').value = "<?php echo isset($_GET['bookStart']) ? htmlspecialchars($_GET['bookStart']) : ''; ?>";
+                document.getElementById('bookEnd').value = "<?php echo isset($_GET['bookEnd']) ? htmlspecialchars($_GET['bookEnd']) : ''; ?>";
+                document.getElementById('bookQuantity').value = "<?php echo isset($_GET['bookQuantity']) ? htmlspecialchars($_GET['bookQuantity']) : ''; ?>";
             </script>
         </div>
         <div class="map">

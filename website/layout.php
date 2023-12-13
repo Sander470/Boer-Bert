@@ -18,7 +18,7 @@
         <a href="book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
-            <select class="dropdownlang" name="lang" id="lang">
+            <select class="dropdownLang" name="lang" id="lang">
                 <option selected value="nl">NL</option>
                 <option value="du">DE</option>
                 <option value="fr">FR</option>

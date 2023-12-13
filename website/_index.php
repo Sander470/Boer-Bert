@@ -10,16 +10,16 @@
     <form class="bookHome1" action="book.php">
         <div class="bookHome2">
             <div class="startDate">
-                <label for="start">Aankomst:</label>
-                <input type="date" name="start" id="bookstart">
+                <label for="bookStart">Aankomst:</label>
+                <input type="date" name="bookStart" id="bookStart">
             </div>
             <div class="endDate">
-                <label for="end">Vertrek:</label>
-                <input type="date" name="end" id="bookend">
+                <label for="bookEnd">Vertrek:</label>
+                <input type="date" name="bookEnd" id="bookEnd">
             </div>
             <div class="peopleAmount">
-                <label for="quantity">Hoeveel mensen:</label>
-                <input type="number" id="bookquantity" name="quantity" min="1" max="10" placeholder="0">
+                <label for="bookQuantity">Hoeveel mensen:</label>
+                <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
             </div>
         </div>
         <button class="submit" type="submit" >Go!</button>
