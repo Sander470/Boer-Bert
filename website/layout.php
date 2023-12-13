@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php global $title; echo $title; ?></title>
+    <title><?php global $title;
+            echo $title; ?></title>
     <link rel="stylesheet" href="wwwroot/css/style.css" />
-    <link rel="icon" href="wwwroot/img/cowlogo.ico"/>
+    <link rel="icon" href="wwwroot/img/cowlogo.ico" />
+
+    <meta property="og:title" content="Bos Mortuus">
+    <meta property="og:description" content="Vier vakantie met Boer Bert!<br><br>De vakantieplek voor vrienden en familie!">
+    <meta property="og:image" content="wwwroot/img/main/cowlogo.png">
+    <meta property="og:url" content="https://www.bosmortuus.nl/">
 </head>
 
 <body>
@@ -18,15 +24,16 @@
         <a href="book.php">Reserveer</a>
         <a href="#">FAQ</a>
         <a href="#">Registreer/Log in</a>
-            <select class="dropdownLang" name="lang" id="lang">
-                <option selected value="nl">NL</option>
-                <option value="du">DE</option>
-                <option value="fr">FR</option>
-                <option value="en">EN</option>
-            </select>
+        <select class="dropdownLang" name="lang" id="lang">
+            <option selected value="nl">NL</option>
+            <option value="du">DE</option>
+            <option value="fr">FR</option>
+            <option value="en">EN</option>
+        </select>
     </div>
 
-    <?php global $childView; include $childView ?>
+    <?php global $childView;
+    include $childView ?>
 
     <div class="footer">
         <div class="footercontent">
