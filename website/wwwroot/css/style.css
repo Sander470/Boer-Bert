@@ -362,7 +362,7 @@ padding: 10%;
     display: flex;
     height: 100svh;
     width: 100%;
-    justify-content: space-around;
+    justify-content:space-evenly;
 }
 
 .bookOptions, .bookCart {
@@ -371,13 +371,12 @@ padding: 10%;
     height: 70svh;
     width: 40svw;
     display:block;
-    align-self: center;
     text-align: center;
     border-radius: 5svh;
     box-shadow: 2svh 2svh var(--shadow);
     padding: 2svh;
 }
-.bookContent {
-    overflow: scroll;
-    height: 90%;
+.bookOptions {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

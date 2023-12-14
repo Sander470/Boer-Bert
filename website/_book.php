@@ -1,3 +1,6 @@
+<head>
+<link rel="cartJS" href="wwwroot/js/cart.js" />
+</head>
 <body>
     <section class="bookForm">
         <div class="bookingForm">
@@ -55,11 +58,81 @@
         <div class="bookOptions">
             Opties
             <div class="bookContent">
+                <div class="shopping-cart">
+                    <div class="product">
+                        <div class="product-image">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Dingo Dog Bones</div>
+                            <div class="product-price">12.99</div>
+                            <div class="product-adding">
+                                <button class="addProduct">
+                                    Add
+                                </button>
+                            </div>
+                            <div class="product-line-price">25.98</div>
+                        </div>
 
+                        <div class="product">
+                            <div class="product-image">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+                                <div class="product-price">45.99</div>
+                                <div class="product-adding">
+                                    <button class="addProduct">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bookCart">
             Winkelmandje
+            <div class="bookContent">
+                <div class="shopping-cart">
+                    <div class="product">
+                        <div class="product-image">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Dingo Dog Bones</div>
+                        </div>
+                        <div class="product-price">12.99</div>
+                        <div class="product-removal">
+                            <button class="remove-product">
+                                Remove
+                            </button>
+                        </div>
+                        <div class="product-line-price">25.98</div>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-image">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+                        </div>
+                        <div class="product-price">45.99</div>
+                        <div class="product-removal">
+                            <button class="remove-product">
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-line-price">45.99</div>
+
+                <div class="totals">
+                    <div class="totals-item">
+                        <label>Total</label>
+                        <div class="totals-value" id="cart-total">71.97</div>
+                    </div>
+                </div>
+                <button class="submit" id="checkout">Checkout</button>
+            </div>
         </div>
     </section>
 </body>
