@@ -1,6 +1,3 @@
-<head>
-<link rel="cartJS" href="wwwroot/js/cart.js" />
-</head>
 <body>
     <section class="bookForm">
         <div class="bookingForm">
@@ -57,83 +54,154 @@
     <section id="cartBooking">
         <div class="bookOptions">
             Opties
-            <div class="bookContent">
-                <div class="shopping-cart">
-                    <div class="product">
-                        <div class="product-image">
-                        </div>
-                        <div class="product-details">
-                            <div class="product-title">Dingo Dog Bones</div>
-                            <div class="product-price">12.99</div>
-                            <div class="product-adding">
-                                <button class="addProduct">
-                                    Add
-                                </button>
+            <div class="container">
+                <div class="screen-togo">
+                    <h2>To Go Menu</h2>
+                    <ul class="menu-items">
+                        <!--    Menu Item 1    -->
+                        <li class="menu-item">
+                            <img src="./img/plate__french-fries.webp" alt="French Fries with Ketchup" class="menu-image">
+                            <div class="menu-item-dets">
+                                <p class="menu-item-heading">French Fries with Ketchup</p>
+                                <p class="g-price">$2.23</p>
                             </div>
-                            <div class="product-line-price">25.98</div>
-                        </div>
-
-                        <div class="product">
-                            <div class="product-image">
+                            <button class="add-button" data-title="French Fies with Ketchup" data-price="2.23">Add to Cart</button>
+                        </li>
+                        <!--    Menu Item 2    -->
+                        <li class="menu-item">
+                            <img src="./img/plate__salmon-vegetables.webp" alt="Salmon and Vegetables" class="menu-image">
+                            <div class="menu-item-dets">
+                                <p class="menu-item-heading">Salmon and Vegetables</p>
+                                <p class="g-price">$8.99</p>
                             </div>
-                            <div class="product-details">
-                                <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-                                <div class="product-price">45.99</div>
-                                <div class="product-adding">
-                                    <button class="addProduct">
-                                        Add
-                                    </button>
-                                </div>
+                            <button class="add-button" data-title="Salmon and Vegetables" data-price="8.99">Add to Cart</button>
+                        </li>
+                        <!--    Menu Item 3    -->
+                        <li class="menu-item">
+                            <img src="./img/plate__spaghetti-meat-sauce.webp" alt="Spaghetti with Sauce" class="menu-image">
+                            <div class="menu-item-dets">
+                                <p class="menu-item-heading">Spaghetti with Sauce</p>
+                                <p class="g-price">$7.89</p>
                             </div>
-                        </div>
-                    </div>
+                            <button class="add-button" data-title="Spaghetti with Sauce" data-price="7.89">Add to Cart</button>
+                        </li>
+                        <!--    Menu Item 4    -->
+                        <li class="menu-item">
+                            <img src="./img/plate__tortellini.webp" alt="Tortellini" class="menu-image">
+                            <div class="menu-item-dets">
+                                <p class="menu-item-heading">Tortellini</p>
+                                <p class="g-price">$8.99</p>
+                            </div>
+                            <button class="add-button" data-title="Tortellini" data-price="8.99">Add to Cart</button>
+                        </li>
+                        <!--    Menu Item 5    -->
+                        <li class="menu-item">
+                            <img src="./img/plate__chicken-salad.webp" alt="Chicken Salad" class="menu-image">
+                            <div class="menu-item-dets">
+                                <p class="menu-item-heading">Chicken Salad</p>
+                                <p class="g-price">$5.75</p>
+                            </div>
+                            <button class="add-button" data-title="Chicken Salad" data-price="5.75">Add to Cart</button>
+                        </li>
+                    </ul>
                 </div>
+
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+                <script>
+                    let subtotal = 0;
+
+                    const calculateTax = subtotal => {
+                        const tax = subtotal * 0.13;
+                        const formattedTax = tax.toFixed(2);
+                        return formattedTax;
+                    };
+
+                    const calculateTotal = subtotal => {
+                        const tax = calculateTax(subtotal);
+                        const total = parseFloat(subtotal) + parseFloat(tax);
+                        const formattedTotal = total.toFixed(2);
+                        return formattedTotal;
+                    };
+
+                    const getImgLink = title => {
+                        let imgLink;
+                        switch (title) {
+                            case 'French Fies with Ketchup':
+                                imgLink = 'https://assets.codepen.io/687837/plate__french-fries.png';
+                                break;
+                            case 'Salmon and Vegetables':
+                                imgLink = 'https://assets.codepen.io/687837/plate__salmon-vegetables.png';
+                                break;
+                            case 'Spaghetti with Sauce':
+                                imgLink = 'https://assets.codepen.io/687837/plate__spaghetti-meat-sauce.png';
+                                break;
+                            case 'Tortellini':
+                                imgLink = 'https://assets.codepen.io/687837/plate__tortellini.png';
+                                break;
+                            case 'Chicken Salad':
+                                imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';
+                                break;
+                            default:
+                                imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';
+                        }
+
+                        return imgLink;
+                    };
+
+                    $('.add-button').on('click', function() {
+                        const title = $(this).data('title');
+                        const price = $(this).data('price');
+                        const imgLink = getImgLink(title);
+
+                        const element = `
+    <li class="cart-item">
+      <img src="${imgLink}" alt="${title}">
+      <div class="cart-item-dets">
+        <p class="cart-item-heading">${title}</p>
+        <p class="g-price">$${price}</p>
+      </div>
+    </li>
+  `;
+                        $('.cart-items').append(element);
+
+                        subtotal = subtotal + price;
+
+                        const formattedSubtotal = subtotal.toFixed(2);
+                        const tax = calculateTax(subtotal);
+                        const total = calculateTotal(subtotal);
+
+                        $('.cart-math').html(`
+    <p class="cart-math-item">
+      <span class="cart-math-header">Subtotal:</span>
+      <span class="g-price subtotal">$${formattedSubtotal}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Tax:</span>
+      <span class="g-price tax">$${tax}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Total:</span>
+      <span class="g-price total">$${total}</span>
+    </p>
+  `);
+                    });
+                </script>
             </div>
         </div>
+        </div>
+
         <div class="bookCart">
             Winkelmandje
-            <div class="bookContent">
-                <div class="shopping-cart">
-                    <div class="product">
-                        <div class="product-image">
-                        </div>
-                        <div class="product-details">
-                            <div class="product-title">Dingo Dog Bones</div>
-                        </div>
-                        <div class="product-price">12.99</div>
-                        <div class="product-removal">
-                            <button class="remove-product">
-                                Remove
-                            </button>
-                        </div>
-                        <div class="product-line-price">25.98</div>
-                    </div>
+            <div class="screen-cart">
+                <h2>Your Cart</h2>
+                <!--  Cart Items -->
+                <ul class="cart-items">
+                </ul>
 
-                    <div class="product">
-                        <div class="product-image">
-                        </div>
-                        <div class="product-details">
-                            <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-                        </div>
-                        <div class="product-price">45.99</div>
-                        <div class="product-removal">
-                            <button class="remove-product">
-                                Remove
-                            </button>
-                        </div>
-                    </div>
+                <div class="cart-math">
+                    <p>Add items to cart</p>
                 </div>
-                <div class="product-line-price">45.99</div>
-
-                <div class="totals">
-                    <div class="totals-item">
-                        <label>Total</label>
-                        <div class="totals-value" id="cart-total">71.97</div>
-                    </div>
-                </div>
-                <button class="submit" id="checkout">Checkout</button>
             </div>
-        </div>
     </section>
 </body>
 

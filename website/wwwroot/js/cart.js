@@ -1,76 +1,76 @@
-// variables
-var fadeTime = 300;
+let subtotal = 0;
 
+const calculateTax = subtotal => {
+  const tax = subtotal * 0.13;
+  const formattedTax = tax.toFixed(2);
+  return formattedTax;
+};
 
-/* Assign actions */
+const calculateTotal = subtotal => {
+  const tax = calculateTax(subtotal);
+  const total = parseFloat(subtotal) + parseFloat(tax);
+  const formattedTotal = total.toFixed(2);
+  return formattedTotal;
+};
 
-$('.product-removal button').click( function() {
-  removeItem(this);
+const getImgLink = title => {
+  let imgLink;
+  switch (title) {
+    case 'French Fies with Ketchup':
+      imgLink = 'https://assets.codepen.io/687837/plate__french-fries.png';
+      break;
+    case 'Salmon and Vegetables':
+      imgLink = 'https://assets.codepen.io/687837/plate__salmon-vegetables.png';
+      break;
+    case 'Spaghetti with Sauce':
+      imgLink = 'https://assets.codepen.io/687837/plate__spaghetti-meat-sauce.png';
+      break;
+    case 'Tortellini':
+      imgLink = 'https://assets.codepen.io/687837/plate__tortellini.png';
+      break;
+    case 'Chicken Salad':
+      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';
+      break;
+    default:
+      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';}
+
+  return imgLink;
+};
+
+$('.add-button').on('click', function () {
+  const title = $(this).data('title');
+  const price = $(this).data('price');
+  const imgLink = getImgLink(title);
+
+  const element = `
+    <li class="cart-item">
+      <img src="${imgLink}" alt="${title}">
+      <div class="cart-item-dets">
+        <p class="cart-item-heading">${title}</p>
+        <p class="g-price">$${price}</p>
+      </div>
+    </li>
+  `;
+  $('.cart-items').append(element);
+
+  subtotal = subtotal + price;
+
+  const formattedSubtotal = subtotal.toFixed(2);
+  const tax = calculateTax(subtotal);
+  const total = calculateTotal(subtotal);
+
+  $('.cart-math').html(`
+    <p class="cart-math-item">
+      <span class="cart-math-header">Subtotal:</span>
+      <span class="g-price subtotal">$${formattedSubtotal}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Tax:</span>
+      <span class="g-price tax">$${tax}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Total:</span>
+      <span class="g-price total">$${total}</span>
+    </p>
+  `);
 });
-$('.product-adding button').click( function() {
-    addItem(this);
-  });
-
-/* Recalculate cart */
-function recalculateCart()
-{
-  var subtotal = 0;
-  
-  /* Sum up row totals */
-  $('.product').each(function () {
-    subtotal += parseFloat($(this).children('.product-line-price').text());
-  });d
-  
-  /* Update totals display */
-  $('.totals-value').fadeOut(fadeTime, function() {
-    $('#cart-total').html(total.toFixed(2));
-    if(total == 0){
-      $('#checkout').fadeOut(fadeTime);
-    }else{
-      $('#checkout').fadeIn(fadeTime);
-    }
-    $('.totals-value').fadeIn(fadeTime);
-  });
-}
-
-
-/* Update quantity */
-function updateQuantity(quantityInput)
-{
-  /* Calculate line price */
-  var productRow = $(quantityInput).parent().parent();
-  var price = parseFloat(productRow.children('.product-price').text());
-  var quantity = $(quantityInput).val();
-  var linePrice = price * quantity;
-  
-  /* Update line price display and recalc cart totals */
-  productRow.children('.product-line-price').each(function () {
-    $(this).fadeOut(fadeTime, function() {
-      $(this).text(linePrice.toFixed(2));
-      recalculateCart();
-      $(this).fadeIn(fadeTime);
-    });
-  });  
-}
-
-
-/* Remove item from cart */
-function removeItem(removeButton)
-{
-  /* Remove row from DOM and recalc cart total */
-  var productRow = $(removeButton).parent().parent();
-  productRow.slideUp(fadeTime, function() {
-    productRow.remove();
-    recalculateCart();
-  });
-}
-/* Add item to cart */
-function addItem(addButton)
-{
-  /* Add row from DOM and recalc cart total */
-  var productRow = $(addButton).parent().parent();
-  productRow.slideUp(fadeTime, function() {
-    productRow.add();
-    recalculateCart();
-  });
-}
