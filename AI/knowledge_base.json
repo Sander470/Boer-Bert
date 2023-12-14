@@ -83,6 +83,10 @@
     {
       "question": "is er een zwembad",
       "answer": "ja er is een zwembad"
+    },
+    {
+      "question": "is er ene fietspomp aanwezig op de camping",
+      "answer": "ja er is een fietspomp aanwezig"
     }
   ]
 }
