@@ -363,6 +363,7 @@ padding: 10%;
     height: 100svh;
     width: 100%;
     justify-content:space-evenly;
+    padding: 10svh;
 }
 
 .bookOptions, .bookCart {
