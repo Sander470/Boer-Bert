@@ -14,7 +14,7 @@
                 }
             </script>
             <input type="button" value="GET" onclick="get()">
-            <form>
+            <form method="post" action="">
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" value="" required />
 
