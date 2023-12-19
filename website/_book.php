@@ -2,7 +2,7 @@
     <section class="bookForm">
         <div class="bookingForm">
             <div class="title">Reserveren</div>
-            <form>
+            <form method="post" action="">
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" required />
 
