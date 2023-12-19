@@ -4,7 +4,7 @@
             <img class="hero-img" src="wwwroot/img/cowphoto.jpg">
             <p class="hero-title">Bos Mortuus</p>
             <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
-            
+
         </div>
     </section>
     <form class="bookHome1" action="book.php">
@@ -22,7 +22,18 @@
                 <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
             </div>
         </div>
-        <button class="submit" type="submit" >Go!</button>
+        <script>
+            function go() {
+                // (A) VARIABLES TO PASS
+                var one = "Foo Bar",
+                    two = ["Hello", "World"];
+
+                // (B) SAVE TO SESSION STORAGE
+                sessionStorage.setItem("one", one);
+                sessionStorage.setItem("two", JSON.stringify(two));
+            }
+        </script>
+        <button class="submit" type="submit" value="GO" onclick="go()">Go!</button>
     </form>
     <section class="infoHome">
         <div class="title">Informatie over de camping</div>
