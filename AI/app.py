@@ -6,7 +6,7 @@ app = Flask(__name__)
 knowledge_base = load_knowledge_base('knowledge_base.json')
 
 
-@app.route("/chat, methods=['POST']")
+@app.route("/chat", methods=['POST'])
 def chat_endpoint():
     data = request.get_json()
     user_question = data.get("question")
