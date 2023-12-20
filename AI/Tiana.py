@@ -1,6 +1,0 @@
-
-
-
-astring = "Hello world!"
-
-    
