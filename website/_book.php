@@ -1,22 +1,28 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 <body>
     <section class="bookForm">
         <div class="bookingForm">
             <div class="title">Reserveren</div>
             <script>
-                function get() {
+                window.onload = function get() {
                     // get from session storage
-                    var one = sessionStorage.getItem("one"),
-                        two = JSON.parse(sessionStorage.getItem("two"));
+                    var bookQuantity = sessionStorage.getItem("bookQuantity");
+                    var bookStart = sessionStorage.getItem("bookStart");
+                    var bookEnd = sessionStorage.getItem("bookEnd");
 
                     // log the information
-                    console.log(one);
-                    console.log(two);
+                    console.log(bookQuantity);
+                    console.log(bookStart);
+                    console.log(bookEnd);
+
+    document.getElementById('bookQuantity').innerHTML = bookQuantity;
+
                 }
             </script>
-            <input type="button" value="GET" onclick="get()">
             <form method="post" action="">
                 <label for="name">Naam:</label>
-                <input type="text" id="name" name="name" value="" required />
+                <input type="text" id="name" name="name" required />
 
                 <label for="tent">Tent:</label>
                 <input type="checkbox" id="tent" name="tent" />
@@ -26,7 +32,7 @@
                 <input type="checkbox" id="caravan" name="caravan" />
 
                 <label for="bookQuantity">Aantal personen:</label>
-                <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" value="" placeholder="0" />
+                <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0" />
 
                 <label for="bookStart">Aankomst:</label>
                 <input type="date" name="bookStart" id="bookStart" value="" required>
@@ -99,6 +105,30 @@
             </div>
         </div>
     </section>
+    <!-- Chatbox and chatbot -->
+    <div class="chatBot">
+<script src="wwwroot/js/chat.js" defer></script>
+<button class="chatbot-toggler">
+<span class="material-symbols-rounded">mode_comment</span>
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="chatbot">
+<header>
+<h2>Chatbot</h2>
+<span class="close-btn material-symbols-outlined">close</span>
+</header>
+<ul class="chatbox">
+<li class="chat incoming">
+<span class="material-symbols-outlined">smart_toy</span>
+<p>Hi there! How can I help you today?</p>
+</li>
+</ul>
+<div class="chat-input">
+<textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+<span id="send-btn" class="material-symbols-rounded">send</span>
+</div>
+</div>
+    </div>
 </body>
 
 </html>
