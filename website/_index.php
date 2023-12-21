@@ -24,13 +24,15 @@
         </div>
         <script>
             function go() {
-                // (A) VARIABLES TO PASS
-                var one = "Foo Bar",
-                    two = ["Hello", "World"];
+        // variables
+        var bookQuantity = document.getElementById("bookQuantity").value;
+        var bookStart = document.getElementById("bookStart").value;
+        var bookEnd = document.getElementById("bookEnd").value;
 
-                // (B) SAVE TO SESSION STORAGE
-                sessionStorage.setItem("one", one);
-                sessionStorage.setItem("two", JSON.stringify(two));
+        // save to session storage
+        sessionStorage.setItem("bookQuantity", bookQuantity);
+        sessionStorage.setItem("bookStart", bookStart);
+        sessionStorage.setItem("bookEnd", bookEnd);
             }
         </script>
         <button class="submit" type="submit" value="GO" onclick="go()">Go!</button>

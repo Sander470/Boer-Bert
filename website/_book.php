@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
 <body>
     <section class="bookForm">
         <div class="bookingForm">
@@ -16,8 +17,10 @@
                     console.log(bookStart);
                     console.log(bookEnd);
 
-    document.getElementById('bookQuantity').innerHTML = bookQuantity;
-
+                    // Set values to input fields
+                    document.getElementById('bookQuantity').value = bookQuantity;
+                    document.getElementById('bookStart').value = bookStart;
+                    document.getElementById('bookEnd').value = bookEnd;
                 }
             </script>
             <form method="post" action="">
@@ -107,27 +110,27 @@
     </section>
     <!-- Chatbox and chatbot -->
     <div class="chatBot">
-<script src="wwwroot/js/chat.js" defer></script>
-<button class="chatbot-toggler">
-<span class="material-symbols-rounded">mode_comment</span>
-<span class="material-symbols-outlined">close</span>
-</button>
-<div class="chatbot">
-<header>
-<h2>Chatbot</h2>
-<span class="close-btn material-symbols-outlined">close</span>
-</header>
-<ul class="chatbox">
-<li class="chat incoming">
-<span class="material-symbols-outlined">smart_toy</span>
-<p>Hi there! How can I help you today?</p>
-</li>
-</ul>
-<div class="chat-input">
-<textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-<span id="send-btn" class="material-symbols-rounded">send</span>
-</div>
-</div>
+        <script src="wwwroot/js/chat.js" defer></script>
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Chatbot</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi there! How can I help you today?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
+        </div>
     </div>
 </body>
 
