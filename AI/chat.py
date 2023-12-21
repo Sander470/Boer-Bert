@@ -95,7 +95,7 @@ class CampingChatbot:
                 answer: str | None = get_answer_for_question(best_match, knowledge_base)
                 if answer:
                     print(f'Bot: {answer}')
-                    continue  # Ga terug naar de volgende gebruikersinvoer
+                    continue  
                 else:
                     print(f'Bot: Ik weet het antwoord niet voor "{best_match}". kun je het me leren?')
                     new_answer: str = input('Type the answer or "skip" to skip: ')
