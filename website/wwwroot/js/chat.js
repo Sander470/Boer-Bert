@@ -58,8 +58,13 @@ const handleChat = () => {
   chatbox.appendChild(createChatLi(userMessage, "outgoing"));
   chatbox.scrollTo(0, chatbox.scrollHeight);
 
-  // Immediately generate the response
-  generateResponse();
+  setTimeout(() => {
+    // Display "Thinking..." message while waiting for the response
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    generateResponse(incomingChatLi);
+  }, 600);
 }
 
 chatInput.addEventListener("input", () => {
