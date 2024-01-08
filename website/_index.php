@@ -38,7 +38,7 @@
         <button class="submit" type="submit" value="GO" onclick="go()">Go!</button>
     </form>
     <section class="infoHome">
-        <div class="title">Informatie over de camping</div>
+        <p class="title">Informatie over de camping</p>
         <div class="cards">
             <div class="card">
                 <div class="cardTitle"></div>
@@ -57,7 +57,7 @@
     <section>
         <div class="reviewHome">
             <div class="HomeReview">
-                <div class="title">Reviews</div>
+                <p class="title">Reviews</p>
                 <div class="bigReview">
                     <div class="bigStar"></div>
                     <div class="bigName"></div>
@@ -87,7 +87,7 @@
         <div class="aboutHome">
             <img src="wwwroot/img/BoerBert.jpeg">
             <div class="aboutCard" onclick="location.href='#'">
-                <div class="title">Over ons</div>
+                <p class="title">Over ons</p>
                 <div class="abtext"></div>
             </div>
         </div>

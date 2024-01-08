@@ -4,7 +4,7 @@
 <body>
     <section class="bookForm">
         <div class="bookingForm">
-            <div class="title">Reserveren</div>
+            <p class="title">Reserveren</p>
             <script>
                 window.onload = function get() {
                     // get from session storage
