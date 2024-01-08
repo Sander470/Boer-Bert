@@ -1,7 +1,28 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
 <body>
     <section class="bookForm">
         <div class="bookingForm">
             <div class="title">Reserveren</div>
+            <script>
+                window.onload = function get() {
+                    // get from session storage
+                    var bookQuantity = sessionStorage.getItem("bookQuantity");
+                    var bookStart = sessionStorage.getItem("bookStart");
+                    var bookEnd = sessionStorage.getItem("bookEnd");
+
+                    // log the information
+                    console.log(bookQuantity);
+                    console.log(bookStart);
+                    console.log(bookEnd);
+
+                    // Set values to input fields
+                    document.getElementById('bookQuantity').value = bookQuantity;
+                    document.getElementById('bookStart').value = bookStart;
+                    document.getElementById('bookEnd').value = bookEnd;
+                }
+            </script>
             <form method="post" action="">
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" required />
@@ -15,38 +36,17 @@
 
                 <label for="bookQuantity">Aantal personen:</label>
                 <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0" />
-                <?php if (isset($bookQuantity)) { ?>
-                    <input type="hidden" id="bookQuantity" name="bookQuantity" value="<?php echo htmlspecialchars($_GET['bookQuantity']); ?>">
-                <?php } elseif (empty($bookQuantity)) { ?>
-                    <input type="hidden" id="bookQuantity" name="bookQuantity" value="">
-                <?php } ?>
 
                 <label for="bookStart">Aankomst:</label>
-                <input type="date" name="bookStart" id="bookStart" required>
-                <?php if (isset($bookStart)) { ?>
-                    <input type="hidden" id="bookStart" name="bookStart" value="<?php echo htmlspecialchars($_GET['bookStart']); ?>">
-                <?php } elseif (empty($bookStart)) { ?>
-                    <input type="hidden" id="bookStart" name="bookStart" value="">
-                <?php } ?>
+                <input type="date" name="bookStart" id="bookStart" value="" required>
 
                 <label for="bookEnd">Vertrek:</label>
-                <input type="date" name="bookEnd" id="bookEnd" required>
-                <?php if (isset($bookEnd)) { ?>
-                    <input type="hidden" id="bookEnd" name="bookEnd" value="<?php echo htmlspecialchars($_GET['bookEnd']); ?>">
-                <?php } elseif (empty($bookEnd)) { ?>
-                    <input type="hidden" id="bookEnd" name="bookEnd" value="">
-                <?php } ?>
+                <input type="date" name="bookEnd" id="bookEnd" value="" required>
 
                 <label>Tent opzet service:</label>
                 <input type="checkbox" />
                 <input class="submit" type="submit" />
             </form>
-            <script>
-                // Get the element for automatic filling of the form
-                document.getElementById('bookStart').value = "<?php echo isset($_GET['bookStart']) ? htmlspecialchars($_GET['bookStart']) : ''; ?>";
-                document.getElementById('bookEnd').value = "<?php echo isset($_GET['bookEnd']) ? htmlspecialchars($_GET['bookEnd']) : ''; ?>";
-                document.getElementById('bookQuantity').value = "<?php echo isset($_GET['bookQuantity']) ? htmlspecialchars($_GET['bookQuantity']) : ''; ?>";
-            </script>
         </div>
         <div class="map">
             <img src="wwwroot/img/BoerBert.jpeg" />
@@ -57,7 +57,7 @@
             Opties
             <div class="containerCart">
                 <ul class="menu-items">
-                    <!--    Menu Item 1    -->
+                    <!--    1    -->
                     <li class="menu-item">
                         <div class="menu-item-dets">
                             <p class="menu-item-heading">Plot 3, 1 week, caravan</p>
@@ -65,7 +65,7 @@
                         </div>
                         <button class="add-button" data-title="Plot 3, 1 week, caravan" data-price="150">Add to Cart</button>
                     </li>
-                    <!--    Menu Item 2    -->
+                    <!--    2    -->
                     <li class="menu-item">
                         <div class="menu-item-dets">
                             <p class="menu-item-heading">Plot 3, 1 week, tent</p>
@@ -73,7 +73,7 @@
                         </div>
                         <button class="add-button" data-title="Plot 3, 1 week, tent" data-price="100">Add to Cart</button>
                     </li>
-                    <!--    Menu Item 3    -->
+                    <!--    3    -->
                     <li class="menu-item">
                         <div class="menu-item-dets">
                             <p class="menu-item-heading">Plot 3, 2 weken, caravan</p>
@@ -81,7 +81,7 @@
                         </div>
                         <button class="add-button" data-title="Plot 3, 2 weken, caravan" data-price="300">Add to Cart</button>
                     </li>
-                    <!--    Menu Item 4    -->
+                    <!--    4    -->
                     <li class="menu-item">
                         <div class="menu-item-dets">
                             <p class="menu-item-heading">Plot 3, 2 weken, tent</p>
@@ -98,7 +98,7 @@
         </div>
 
         <div class="bookCart">
-            Winkelmandje
+            Winkelwagen
             <!--  Cart Items -->
             <ul class="cart-items">
             </ul>
@@ -108,6 +108,30 @@
             </div>
         </div>
     </section>
+    <!-- Chatbox and chatbot -->
+    <div class="chatBot">
+        <script src="wwwroot/js/chat.js" defer></script>
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Chatbot</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi there! How can I help you today?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
             <img class="hero-img" src="wwwroot/img/cowphoto.jpg">
             <p class="hero-title">Bos Mortuus</p>
             <p class="hero-subtitle">Vier vakantie met boer Bert!</p>
-            
+
         </div>
     </section>
     <form class="bookHome1" action="book.php">
@@ -22,7 +22,20 @@
                 <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
             </div>
         </div>
-        <button class="submit" type="submit" >Go!</button>
+        <script>
+            function go() {
+        // variables
+        var bookQuantity = document.getElementById("bookQuantity").value;
+        var bookStart = document.getElementById("bookStart").value;
+        var bookEnd = document.getElementById("bookEnd").value;
+
+        // save to session storage
+        sessionStorage.setItem("bookQuantity", bookQuantity);
+        sessionStorage.setItem("bookStart", bookStart);
+        sessionStorage.setItem("bookEnd", bookEnd);
+            }
+        </script>
+        <button class="submit" type="submit" value="GO" onclick="go()">Go!</button>
     </form>
     <section class="infoHome">
         <div class="title">Informatie over de camping</div>
