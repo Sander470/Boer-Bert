@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 
 <body>
-    <section class="bookForm">
+    <div class="formContainer">
         <div class="bookingForm">
-            <div class="title">Reserveren</div>
+            <p class="title">Reserveren</p>
             <script>
                 window.onload = function get() {
                     // get from session storage
@@ -24,34 +24,56 @@
                 }
             </script>
             <form method="post" action="">
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="name" required />
+                <div class="name">
+                    <input type="text" id="firstName" name="firstName" required 
+                    placeholder="Voornaam">
+                    <input type="text" name="infix" id="infix"
+                    placeholder="">
+                    <input type="text" name="lastName" id="lastName" required
+                    placeholder="Achternaam">
+                </div>
 
-                <label for="tent">Tent:</label>
-                <input type="checkbox" id="tent" name="tent" />
-                <label for="camper">Camper:</label>
-                <input type="checkbox" id="camper" name="camper" />
-                <label for="caravan">Caravan:</label>
-                <input type="checkbox" id="caravan" name="caravan" />
+                <div class="formEntry">
+                    <label for="placeType">Plaats type</label>
+                    <select name="placeType" id="placeType" class="formInput">
+                        <option value="camper">camper</option>
+                        <option value="caravan">caravan</option>
+                        <option value="tent">tent</option>
+                    </select>
+                </div>
 
-                <label for="bookQuantity">Aantal personen:</label>
-                <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0" />
+                <div class="formEntry">
+                    <label for="bookQuantity">Aantal personen</label>
+                    <input class="formInput" type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
+                </div>
 
-                <label for="bookStart">Aankomst:</label>
-                <input type="date" name="bookStart" id="bookStart" value="" required>
+                <div class="tallFormEntry">
+                    <div class="formEntry">
+                        <label for="bookStart">Aankomst</label>
+                        <input class="formInput" type="date" name="bookStart" id="bookStart" value="" required>
+                    </div>
 
-                <label for="bookEnd">Vertrek:</label>
-                <input type="date" name="bookEnd" id="bookEnd" value="" required>
+                    <div class="formEntry">
+                        <label for="bookEnd">Vertrek</label>
+                        <input class="formInput" type="date" name="bookEnd" id="bookEnd" value="" required>
+                    </div>
+                </div>
 
-                <label>Tent opzet service:</label>
-                <input type="checkbox" />
-                <input class="submit" type="submit" />
+                <div class="formEntry">
+                    <label>Hulp bij opzetten tent/caravan/camper</label>
+                    <select name="setupHelp" id="setupHelp" class="formInput">
+                        <option value="ja">ja</option>
+                        <option value="nee" selected>nee</option>
+                    </select>
+                </div>
+
+                <input class="submit" type="submit">
             </form>
         </div>
         <div class="map">
             <img src="wwwroot/img/BoerBert.jpeg" />
         </div>
-    </section>
+    </div>
     <section id="cartBooking">
         <div class="bookOptions">
             Opties
