@@ -4,7 +4,7 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null; // Variable to store user's message
-const API_KEY = "127.0.0.1:5000/chat"; // Paste your API key here
+const API_URL = "http://127.0.0.1:5000/chat"; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -17,33 +17,34 @@ const createChatLi = (message, className) => {
   return chatLi; // return chat <li> element
 }
 
-const generateResponse = (chatElement) => {
-  const API_URL = "127.0.0.1:5000/chat";
-  const messageElement = chatElement.querySelector("p");
-  // Define the properties and message for the API request
-  const requestOptions = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_KEY}`
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [{role: "user", content: userMessage}],
-    })
+const generateResponse = () => {
+    // Define the properties and message for the API request
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        question: userMessage, // Send the user's message as a question
+      })
+    };
+  
+    // Send POST request to API
+    fetch(API_URL, requestOptions)
+      .then(response => response.json())
+      .then(data => {
+        // Process the API response data
+        const answer = data.answer;
+        chatbox.appendChild(createChatLi(answer, "incoming"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+      })
+      .catch(() => {
+        // Handle errors
+        const errorMessage = "Oops! Something went wrong. Please try again.";
+        chatbox.appendChild(createChatLi(errorMessage, "incoming error"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+      });
   }
-  // Send POST request to API, get response and set the reponse as paragraph text
-  fetch(API_URL, requestOptions)
-    .then(res => res.json())
-    .then(data => {
-      messageElement.textContent = data.choices[0].message.content.trim();
-    })
-    .catch(() => {
-      messageElement.classList.add("error");
-      messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    })
-    .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
-}
 
 const handleChat = () => {
   userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
@@ -57,13 +58,8 @@ const handleChat = () => {
   chatbox.appendChild(createChatLi(userMessage, "outgoing"));
   chatbox.scrollTo(0, chatbox.scrollHeight);
 
-  setTimeout(() => {
-    // Display "Thinking..." message while waiting for the response
-    const incomingChatLi = createChatLi("Thinking...", "incoming");
-    chatbox.appendChild(incomingChatLi);
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-    generateResponse(incomingChatLi);
-  }, 600);
+  // Immediately generate the response
+  generateResponse();
 }
 
 chatInput.addEventListener("input", () => {
