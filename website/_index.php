@@ -11,11 +11,11 @@
         <div class="bookHome2">
             <div class="startDate">
                 <label for="bookStart">Aankomst:</label>
-                <input type="date" name="bookStart" id="bookStart">
+                <input type="date" name="bookStart" id="bookStart" max="">
             </div>
             <div class="endDate">
                 <label for="bookEnd">Vertrek:</label>
-                <input type="date" name="bookEnd" id="bookEnd">
+                <input type="date" name="bookEnd" id="bookEnd" min="">
             </div>
             <div class="peopleAmount">
                 <label for="bookQuantity">Hoeveel mensen:</label>
@@ -23,19 +23,36 @@
             </div>
         </div>
         <script>
-            function go() {
-        // variables
-        var bookQuantity = document.getElementById("bookQuantity").value;
-        var bookStart = document.getElementById("bookStart").value;
-        var bookEnd = document.getElementById("bookEnd").value;
+            var bookQuantity = document.getElementById("bookQuantity").value;
+            var bookStart = document.getElementById("bookStart").value;
+            var bookEnd = document.getElementById("bookEnd").value;
 
-        // save to session storage
-        sessionStorage.setItem("bookQuantity", bookQuantity);
-        sessionStorage.setItem("bookStart", bookStart);
-        sessionStorage.setItem("bookEnd", bookEnd);
+            function go() {
+                var obfuscatedData = btoa(JSON.stringify({
+                    'bookQuantity': bookQuantity,
+                    'bookStart': bookStart,
+                    'bookEnd': bookEnd
+                }));
+
+                // save to local storage
+                localStorage.setItem("obfuscatedData", obfuscatedData);
+            }
+
+            function validateForm() {
+                if (bookStart == "" || bookEnd == "") {
+                    alert("Vul een begin- en einddatum in.");
+                    event.preventDefault();
+                } else if (new Date(bookStart) >= new Date(bookEnd)) {
+                    document.getElementById("bookStart").value = "";
+                    document.getElementById("bookEnd").value = "";
+                    alert("Aankomstdatum moet vóór vertrekdatum liggen");
+                    event.preventDefault();
+                } else {
+                    go();
+                }
             }
         </script>
-        <button class="submit" type="submit" value="GO" onclick="go()">Go!</button>
+        <button class="submit" type="submit" value="GO" onclick="validateForm()">Go!</button>
     </form>
     <section class="infoHome">
         <div class="title">Informatie over de camping</div>
