@@ -39,10 +39,7 @@
             }
 
             function validateForm() {
-                if (bookStart == "" || bookEnd == "") {
-                    alert("Vul een begin- en einddatum in.");
-                    event.preventDefault();
-                } else if (new Date(bookStart) >= new Date(bookEnd)) {
+                if (new Date(bookStart) >= new Date(bookEnd)) {
                     document.getElementById("bookStart").value = "";
                     document.getElementById("bookEnd").value = "";
                     alert("Aankomstdatum moet vóór vertrekdatum liggen");
