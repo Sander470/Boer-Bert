@@ -4,7 +4,6 @@
 <body>
     <div class="formContainer">
         <div class="bookingForm">
-            <p class="title">Reserveren</p>
             <script>
                 window.onload = function get() {
                     // get from session storage
@@ -24,7 +23,9 @@
                 }
             </script>
             <form method="post" action="">
-                <div class="name">
+            <p class="title">Reserveren</p>
+
+                <div class="formRow inlineFormRow">
                     <input type="text" id="firstName" name="firstName" required 
                     placeholder="Voornaam">
                     <input type="text" name="infix" id="infix"
@@ -33,7 +34,7 @@
                     placeholder="Achternaam">
                 </div>
 
-                <div class="formEntry">
+                <div class="formRow inlineFormRow">
                     <label for="placeType">Plaats type</label>
                     <select name="placeType" id="placeType" class="formInput">
                         <option value="camper">camper</option>
@@ -42,24 +43,24 @@
                     </select>
                 </div>
 
-                <div class="formEntry">
+                <div class="formRow inlineFormRow">
                     <label for="bookQuantity">Aantal personen</label>
                     <input class="formInput" type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
                 </div>
 
-                <div class="tallFormEntry">
-                    <div class="formEntry">
+                <div class="formRowStack">
+                    <div class="formRow stackedFormRow">
                         <label for="bookStart">Aankomst</label>
                         <input class="formInput" type="date" name="bookStart" id="bookStart" value="" required>
                     </div>
 
-                    <div class="formEntry">
+                    <div class="formRow stackedFormRow">
                         <label for="bookEnd">Vertrek</label>
                         <input class="formInput" type="date" name="bookEnd" id="bookEnd" value="" required>
                     </div>
                 </div>
 
-                <div class="formEntry">
+                <div class="formRow inlineFormRow">
                     <label>Hulp bij opzetten tent/caravan/camper</label>
                     <select name="setupHelp" id="setupHelp" class="formInput">
                         <option value="ja">ja</option>
