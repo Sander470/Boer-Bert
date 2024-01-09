@@ -33,12 +33,14 @@ const generateResponse = () => {
     fetch(API_URL, requestOptions)
       .then(response => response.json())
       .then(data => {
+        console.log('API Response:', data);
         // Process the API response data
         const answer = data.answer;
         chatbox.appendChild(createChatLi(answer, "incoming"));
         chatbox.scrollTo(0, chatbox.scrollHeight);
       })
       .catch(() => {
+        console.error('API Error:', error);
         // Handle errors
         const errorMessage = "Oops! Something went wrong. Please try again.";
         chatbox.appendChild(createChatLi(errorMessage, "incoming error"));
