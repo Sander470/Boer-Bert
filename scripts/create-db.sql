@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     salt VARCHAR(20) NULL,
     first_name VARCHAR(256) NULL,
     last_name VARCHAR(256) NULL,
+    birth_date DATE NULL,
     phone VARCHAR(15) NULL,
     street VARCHAR(200) NULL,
     city VARCHAR(200) NULL,

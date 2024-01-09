@@ -37,7 +37,7 @@ class Database
     {
         $this->connectDB();
         // PREPARED statement
-        $prepared = $this->conn->prepare('INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);');
+        $prepared = $this->conn->prepare( 'INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);' );
         $prepared->bind_param('sss', $mail, $name, $message);
         $this->query($prepared);
         $this->disconnectDB();
