@@ -1,9 +1,11 @@
 # Importing necessary libraries
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from chat import get_answer_for_question, load_knowledge_base, find_best_match
 
 # Create a Flask web application
 app = Flask(__name__)
+CORS(app)
 
 # Load the knowledge base from a JSON file
 knowledge_base = load_knowledge_base('knowledge_base.json')
