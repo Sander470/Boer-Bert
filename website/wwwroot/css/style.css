@@ -314,7 +314,7 @@ body {
     width: 50%;
     justify-content: center;
     margin: 10svh;
-    background-color: var(--dark);
+    background-color: var(--cyan);
     border-radius: 5rem;
 }
 
@@ -396,8 +396,8 @@ form .name {
     border-radius: 1.5rem;
     justify-self: center;
     border: none;
-    background-color: var(--green);
-    color: var(--dark);
+    background-color: var(--dark);
+    color: var(--offwhite);
     font-size: 130%;
     box-shadow: 1svh 1svh var(--shadow);
     display: flex;
