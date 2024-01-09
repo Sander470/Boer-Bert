@@ -7,20 +7,28 @@
             <div class="title">Reserveren</div>
             <script>
                 window.onload = function get() {
-                    // get from session storage
-                    var bookQuantity = sessionStorage.getItem("bookQuantity");
-                    var bookStart = sessionStorage.getItem("bookStart");
-                    var bookEnd = sessionStorage.getItem("bookEnd");
+                    // cleanup link
+                    var urlWithoutParams = window.location.href.split('?')[0];
+                    history.replaceState({}, document.title, urlWithoutParams);
 
-                    // log the information
-                    console.log(bookQuantity);
-                    console.log(bookStart);
-                    console.log(bookEnd);
 
-                    // Set values to input fields
-                    document.getElementById('bookQuantity').value = bookQuantity;
-                    document.getElementById('bookStart').value = bookStart;
-                    document.getElementById('bookEnd').value = bookEnd;
+                    // get from local storage
+                    var obfuscatedData = localStorage.getItem("obfuscatedData");
+
+                    if (obfuscatedData) {
+                        // deobfuscate data
+                        var deobfuscatedData = JSON.parse(atob(obfuscatedData));
+
+                        // log information
+                        console.log(deobfuscatedData.bookQuantity);
+                        console.log(deobfuscatedData.bookStart);
+                        console.log(deobfuscatedData.bookEnd);
+
+                        // set values to input
+                        document.getElementById('bookQuantity').value = deobfuscatedData.bookQuantity;
+                        document.getElementById('bookStart').value = deobfuscatedData.bookStart;
+                        document.getElementById('bookEnd').value = deobfuscatedData.bookEnd;
+                    }
                 }
             </script>
             <form method="post" action="">
