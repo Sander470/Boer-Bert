@@ -1,25 +1,22 @@
-<button onclick="openSignal()" id="gateButton" value="Open">Gate1</button>
-
-<?
-$jsonString = file_get_contents('configGate.json');
-$data = json_decode($jsonString, true);
-
-function openGate()
-{
-    $data[1]['firstName'] = "Bob the second";
-    $newJsonString = json_encode($data);
-file_put_contents('configGate.json', $newJsonString);
-echo "Gate is opened!";
-}
-
-?>
+<body>
+    <p id="status"></p>
+    <select id="gateButton" onclick="submitData()" method="post" action="gateUpdate.php">
+        <option value="open">Open</option>
+        <option value="closed" selected>Closed</option>
+    </select>
+</body>
 <script>
     fetch("configGate.json")
         .then(response => response.json())
         .then(jsonObject => console.log(jsonObject));
 
-        function openSignal() {
-        var result = '<?php openGate(); ?>'
-        document.write(result);
-}
+    function submitData() {
+        if (isset($_POST)) {
+            $gateStatus = $_POST["gateStatus"];
+            // moet nog ff checken hoe json schrijven dus dit klopt niet maar you get the idea
+            JSON_write("configGate.json", $gateState);
+        }
+    };
+
+    document.getElementById("status").innerHTML = gateButton.value;
 </script>
