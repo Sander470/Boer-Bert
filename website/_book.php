@@ -30,7 +30,7 @@
                     }
                 }
             </script>
-            <form method="post" action="">
+            <form method="post" action="book_order.php">
             <p class="title">Reserveren</p>
 
                 <div class="formRow inlineFormRow">

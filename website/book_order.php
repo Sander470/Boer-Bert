@@ -1,6 +1,10 @@
 <?php
+use processing\Database;
+include 'processing\Database.php';
 
-if (isset($_POST)) {
+//if (isset($_POST["submit"])) {
+    echo 'welcome<br>';
+
     $firstName = $_POST["firstName"];
     $infix = $_POST["infix"];
     $lastName = $_POST["lastName"];
@@ -22,7 +26,9 @@ if (isset($_POST)) {
     $phoneNr = $_POST["phoneNr"];
     $setupHelp = $_POST["setupHelp"];
 
+    var_dump($_POST);
+
+    $database = new Database('../../db.json', true);
 
 
-
-}
+//}
