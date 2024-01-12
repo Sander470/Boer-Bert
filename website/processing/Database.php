@@ -6,7 +6,7 @@ use mysqli;
 
 class Database
 {
-    private mysqli $conn;
+    public mysqli $conn;
     private $host;
     private $username;
     private $password;
@@ -37,7 +37,7 @@ class Database
     {
         $this->connectDB();
         // PREPARED statement
-        $prepared = $this->conn->prepare('INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);');
+        $prepared = $this->conn->prepare( 'INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);' );
         $prepared->bind_param('sss', $mail, $name, $message);
         $this->query($prepared);
         $this->disconnectDB();
@@ -48,13 +48,11 @@ class Database
         try {
             $prepared->execute();
             if($this->debug) {
-                echo '<br>Inserted successfully!';
+                echo '<br>executed successfully!';
             }
         } catch (Exception $e) {
             if (str_contains($e->getMessage(), 'Duplicate entry')) {
-//                echo '<br><h1>You have already sent this message.</h1>';
-//                echo '<h1><a href="javascript:history.go(-1)" style="text-decoration: underline; color: var(--secondaryTxt)">
-//                Go back</a></h1>';
+                // error code for duplicate entry in database
                 $this->disconnectDB();
                 exit;
             }
