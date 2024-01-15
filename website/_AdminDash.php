@@ -6,13 +6,23 @@
     </select>
 </body>
 <script>
+    logState();
+    let gateStatus;
     async function logState() {
         const response = await fetch("configGate.json");
-        const state = await response.json(["gateState"]);
-        console.log(state);
-        document.getElementById("status").innerHTML = state["gateState"];
+        const jsonData = await response.json(["gateState"]);
+        console.log("status gate: " + jsonData["gateState"]);
+        document.getElementById("status").innerHTML = jsonData["gateState"];
+        gateStatus = jsonData["gateState"];
     };
-    logState();
+
+console.log(gateStatus);
+    if (gateStatus["gateState"]) {
+document.getElementById(gateButton.value) = open;
+    }
+    else {
+        document.getElementById(gateButton.value) = closed;
+    }
 </script>
 <?php function submitData()
 {

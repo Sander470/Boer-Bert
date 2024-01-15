@@ -30,6 +30,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    z-index: 10;
 }
 
 .navbar {
@@ -38,7 +39,6 @@ body {
     display: flex;
     justify-content: space-around;
     position: sticky;
-    z-index: 10;
     align-items: center;
     box-shadow: 0 1svh var(--shadow);
 }
@@ -49,7 +49,6 @@ body {
 }
 
 .footer {
-    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -633,6 +632,7 @@ transform: scale(0.5);
 transform-origin: bottom right;
 box-shadow: 0 0 128px 0 var(--shadow), 0 32px 64px -48px var(--shadow);
 transition: all 0.1s ease;
+z-index: 20;
 }
 
 body.show-chatbot .chatbot {
