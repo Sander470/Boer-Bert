@@ -122,7 +122,7 @@
             </form>
         </div>
         <div class="map">
-            <img src="wwwroot/img/BoerBert.jpeg"  alt="map of the boer himself"/>
+            <img src="wwwroot/img/mapBM.jpg"  alt="map of Bos Mortuus"/>
         </div>
     </div>
     <section id="cartBooking">
