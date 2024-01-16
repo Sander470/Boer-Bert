@@ -145,15 +145,14 @@
             <ul class="chatbox">
                 <li class="chat incoming">
                     <span class="material-symbols-outlined">smart_toy</span>
-                    <p>Hi there! How can I help you today?</p>
+                    <p>Hi! Ik ben jouw camping chatbot.<br>Ik kan jouw helpen met het kiezen van de juiste plek en eventuele andere vragen.</p>
                 </li>
             </ul>
             <div class="chat-input">
-                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <textarea id="pyscript-input" placeholder="Enter a message..." spellcheck="false" required></textarea>
                 <span id="send-btn" class="material-symbols-rounded">send</span>
             </div>
         </div>
+        <script type="py" src="./main.py" config="./pyscript.toml"></script>
     </div>
 </body>
-
-</html>

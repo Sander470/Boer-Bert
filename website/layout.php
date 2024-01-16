@@ -8,6 +8,8 @@
             echo $title; ?></title>
     <link rel="stylesheet" href="wwwroot/css/style.css" />
     <link rel="icon" href="wwwroot/img/cowlogo.ico" />
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.12.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2023.12.1/core.js"></script>
 
     <!-- HTML Meta Tags -->
     <meta name="description" content="Vier vakantie met Boer Bert!
