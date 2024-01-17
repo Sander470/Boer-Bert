@@ -31,17 +31,19 @@ class Database
         $this->password = $data->password;
         $this->dbname = $data->dbname;
         $this->debug = $debug;
+
+//        echo $this->host . $this->username . $this->password . $this->dbname;
     }
 
-    public function insertContactDetails($mail, $name, $message): void
-    {
-        $this->connectDB();
-        // PREPARED statement
-        $prepared = $this->conn->prepare( 'INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);' );
-        $prepared->bind_param('sss', $mail, $name, $message);
-        $this->query($prepared);
-        $this->disconnectDB();
-    }
+//    public function insertContactDetails($mail, $name, $message): void
+//    {
+//        $this->connectDB();
+//        // PREPARED statement
+//        $prepared = $this->conn->prepare( 'INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);' );
+//        $prepared->bind_param('sss', $mail, $name, $message);
+//        $this->query($prepared);
+//        $this->disconnectDB();
+//    }
 
     private function query($prepared): void
     {
@@ -62,7 +64,7 @@ class Database
         }
     }
 
-    private function connectDB(): void
+    public function connectDB(): void
     {
         try {
             $this->conn = new mysqli($this->host, $this->username, $this->password, $this->dbname);
@@ -78,7 +80,7 @@ class Database
         }
     }
 
-    private function disconnectDB(): void
+    public function disconnectDB(): void
     {
         $this->conn->close();
         if($this->debug) {
