@@ -801,18 +801,13 @@ header h2 {
 }
 /* Admin Dashboard */
 .gateButton {
-    /* padding: 0.5rem; */
-    width: 25%;
-    border-radius: 1rem;
-    margin: 1rem;
-    justify-self: center;
+    width: 12rem;
+    background: var(--cyan);
     border: none;
-    background-color: var(--green);
-    color: var(--cyan);
-    font-size: 130%;
-    box-shadow: 1svh 1svh var(--shadow);
-    display: flex;
-    justify-content: center;
+    border-radius: 0.55rem;
+    padding: 0.75rem;
+    color: var(--offwhite);
+    margin: 1rem;
 }
 
 .gateButton:hover {
@@ -822,4 +817,5 @@ header h2 {
 .gateText{
     color: var(--cyan);
     font-size: 130%;
+    margin: 1rem;
 }

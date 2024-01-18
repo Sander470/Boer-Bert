@@ -7,10 +7,11 @@ echo "<p class='gateText'>$jsonString<p>";
 <body>
     <link rel="stylesheet" href="wwwroot/css/style.css" />
     <link rel="icon" href="wwwroot/img/cowlogo.ico" />
-    <form action="changeGateState.php" method="post">
-        <input type="radio" name="gateState" value="open">open</button>
-        <input type="radio" name="gateState" value="close">close</button>
-        <button type=submit>submit</button>
+    <form action="changeGateState.php" method="post" class="gateText">
+        <input type="radio" name="gateState" value="true">open</button>
+        <input type="radio" name="gateState" value="false">close</button>
+        <br>
+        <button type=submit class="gateButton">submit</button>
     </form>
 </body>
 <script>
