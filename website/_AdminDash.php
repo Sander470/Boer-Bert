@@ -11,7 +11,7 @@ echo "<p class='gateText'>$jsonString<p>";
         <input type="radio" name="gateState" value="true">open</button>
         <input type="radio" name="gateState" value="false">close</button>
         <br>
-        <button type=submit class="gateButton" >submit</button>
+        <button type=submit class="gateButton">submit</button>
     </form>
 </body>
 <script>

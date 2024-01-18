@@ -150,16 +150,11 @@ body {
 
 /* 404 */
 .pageNotfound {
+    height: 70svh;
     width: 100%;
+    display: flex;
+    justify-content: center;
     padding: 10%;
-}
-.pageNotfound img{
-    height: 75svh;
-    width: auto;
-    margin: 5svh;
-    align-self: center;
-    border-radius: 5svh;
-    box-shadow: 2svh 2svh var(--shadow);
 }
 
 /* General style other pages */
@@ -407,6 +402,8 @@ form .name {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+
 
 .submit {
     /* padding: 0.5rem; */
