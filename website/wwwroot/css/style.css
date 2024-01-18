@@ -799,3 +799,27 @@ header h2 {
         display: block;
     }
 }
+/* Admin Dashboard */
+.gateButton {
+    /* padding: 0.5rem; */
+    width: 25%;
+    border-radius: 1rem;
+    margin: 1rem;
+    justify-self: center;
+    border: none;
+    background-color: var(--green);
+    color: var(--cyan);
+    font-size: 130%;
+    box-shadow: 1svh 1svh var(--shadow);
+    display: flex;
+    justify-content: center;
+}
+
+.gateButton:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.gateText{
+    color: var(--cyan);
+    font-size: 130%;
+}

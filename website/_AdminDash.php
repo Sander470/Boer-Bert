@@ -1,13 +1,14 @@
 <?php
 // get file and write current status
 $jsonString = file_get_contents('configGate.json');
-echo $jsonString;
-
+echo "<p class='gateText'>$jsonString<p>";
 ?>
 
 <body>
-    <button onclick="submitOpen()">Open</button>
-    <button onclick="submitClose()">Close</button>
+<link rel="stylesheet" href="wwwroot/css/style.css" />
+    <link rel="icon" href="wwwroot/img/cowlogo.ico" />>
+    <button class="gateButton" onclick="submitOpen()">Open</button>
+    <button class="gateButton" onclick="submitClose()">Close</button>
 </body>
 <script>
     logState();

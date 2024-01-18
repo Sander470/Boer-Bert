@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['data'])) {
     // read file
-    $jsonString = file_get_contents('jsonFile.json');
+    $jsonString = file_get_contents('configGate.json');
     // decode
     $data = json_decode($jsonString, true);
     // change value
