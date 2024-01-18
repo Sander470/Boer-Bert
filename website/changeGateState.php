@@ -1,5 +1,6 @@
-<?php
-if (isset($_POST['data'])) {
+ <?php
+if (isset($_POST)) {
+    $gateState = $_POST["gateState"];
     // read file
     $jsonString = file_get_contents('configGate.json');
     // decode
@@ -8,8 +9,14 @@ if (isset($_POST['data'])) {
     $data[0]["gateState"] = "true";
     // replace value
     file_put_contents('configGate.json', json_encode($data));
-    echo '$data';
+    var_dump($data);
 } else {
     echo 'Error: No data received';
 }
-?>
+
+# changeGateState.php
+
+// if(isset($_POST)) {
+//     $gateState = $_POST["gateState"];
+//     echo $gateState;
+// }

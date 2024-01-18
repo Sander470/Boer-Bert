@@ -5,10 +5,13 @@ echo "<p class='gateText'>$jsonString<p>";
 ?>
 
 <body>
-<link rel="stylesheet" href="wwwroot/css/style.css" />
-    <link rel="icon" href="wwwroot/img/cowlogo.ico" />>
-    <button class="gateButton" onclick="submitOpen()">Open</button>
-    <button class="gateButton" onclick="submitClose()">Close</button>
+    <link rel="stylesheet" href="wwwroot/css/style.css" />
+    <link rel="icon" href="wwwroot/img/cowlogo.ico" />
+    <form action="changeGateState.php" method="post">
+        <input type="radio" name="gateState" value="open">open</button>
+        <input type="radio" name="gateState" value="close">close</button>
+        <button type=submit>submit</button>
+    </form>
 </body>
 <script>
     logState();
@@ -19,20 +22,4 @@ echo "<p class='gateText'>$jsonString<p>";
         console.log("status gate: " + jsonData["gateState"]);
         gateStatus = jsonData["gateState"];
     };
-
-    // call on PHP function
-    function submitOpen() {
-        fetch('Gate_open.php')
-            .then(response => response.text())
-            .then(data => {
-                console.log(data)
-            });
-    }
-    function submitClose() {
-        fetch('Gate_close.php')
-            .then(response => response.text())
-            .then(data => {
-                console.log(data)
-            });
-    }
 </script>
