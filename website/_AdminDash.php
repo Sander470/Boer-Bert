@@ -21,10 +21,17 @@ echo $jsonString;
 
     // call on PHP function
     function submitOpen() {
-        fetch('Gate_script.php')
+        fetch('Gate_open.php')
             .then(response => response.text())
             .then(data => {
-                console.log("done!")
+                console.log(data)
+            });
+    }
+    function submitClose() {
+        fetch('Gate_close.php')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data)
             });
     }
 </script>
