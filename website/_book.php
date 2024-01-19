@@ -32,7 +32,6 @@
                 }
             }
         </script>
-        <?php //include "book_form.php"; ?>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<p style=\"color: white;\">data submitted successfully!";
