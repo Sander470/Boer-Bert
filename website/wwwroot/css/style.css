@@ -150,11 +150,17 @@ body {
 
 /* 404 */
 .pageNotfound {
-    height: 70svh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10%;
+    display: grid;
+    justify-content:center;
+    padding: 5%;
+}
+.pageNotfound img{
+    height: 50svh;
+    width: auto;
+    margin: 5svh;
+    border-radius: 5svh;
+    padding: 0%;
 }
 
 /* General style other pages */
