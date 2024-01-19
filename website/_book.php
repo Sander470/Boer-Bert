@@ -34,7 +34,7 @@
         </script>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            echo "<p style=\"color: white;\">data submitted successfully!";
+            echo "<p style=\"color: white;\">Form submitted successfully!";
             include "book_order.php";
         } else {
             include "book_form.php";

@@ -395,6 +395,7 @@ form .name {
     background-color: var(--offwhite)
 }
 
+
 .stackedFormRow {
     display: flex;
     justify-content: space-between;
@@ -409,7 +410,10 @@ form .name {
     justify-content: space-evenly;
 }
 
-
+::placeholder {
+    color: var(--offwhite);
+    opacity: 1; /* Firefox */
+  }
 
 .submit {
     /* padding: 0.5rem; */

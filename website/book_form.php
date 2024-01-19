@@ -2,12 +2,14 @@
     <p class="title">Reserveren</p>
 
     <div class="formRow inlineFormRow">
-        <input type="text" id="firstName" name="firstName" required
-               placeholder="Voornaam">
-        <input type="text" name="infix" id="infix"
-               placeholder="">
-        <input type="text" name="lastName" id="lastName" required
-               placeholder="Achternaam">
+        <input type="text" id="firstName" name="firstName" required placeholder="Voornaam">
+        <input type="text" name="infix" id="infix" placeholder="">
+        <input type="text" name="lastName" id="lastName" required placeholder="Achternaam">
+    </div>
+
+    <div class="formRow inlineFormRow">
+    <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="mail" class="formInput" required placeholder="E-mail">
     </div>
 
     <div class="formRow inlineFormRow">
@@ -39,8 +41,7 @@
 
     <div class="formRow inlineFormRow">
         <label for="bookQuantity">Aantal personen</label>
-        <input class="formInput" type="number" id="numOfPeople" name="numOfPeople" min="1" max="10"
-               placeholder="0">
+        <input class="formInput" type="number" id="numOfPeople" name="numOfPeople" min="1" max="10" placeholder="0">
     </div>
 
     <div class="formRowStack">
