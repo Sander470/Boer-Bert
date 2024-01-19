@@ -61,15 +61,6 @@
                 </div>
 
                 <div class="formRow inlineFormRow">
-                    <label for="placeType">Plaats type</label>
-                    <select name="placeType" id="placeType" class="formInput">
-                        <option value="camper">camper</option>
-                        <option value="caravan">caravan</option>
-                        <option value="tent">tent</option>
-                    </select>
-                </div>
-
-                <div class="formRow inlineFormRow">
                     <label for="bookQuantity">Aantal personen</label>
                     <input class="formInput" type="number" id="numOfPeople" name="numOfPeople" min="1" max="10" placeholder="0">
                 </div>
@@ -122,7 +113,7 @@
             </form>
         </div>
         <div class="map">
-            <img src="wwwroot/img/BoerBert.jpeg"  alt="map of the boer himself"/>
+            <img src="wwwroot/img/mapBM.jpg"  alt="map of Bos Mortuus"/>
         </div>
     </div>
     <section id="cartBooking">
