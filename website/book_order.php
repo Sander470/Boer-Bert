@@ -3,7 +3,7 @@ use processing\Database;
 include 'processing/Database.php';
 
 //if (isset($_POST["submit"])) {
-    echo 'welcome';
+    echo '<h1>WORKING!</h1>';
 
     $firstName = $_POST["firstName"];
     $infix = $_POST["infix"];
@@ -26,12 +26,13 @@ include 'processing/Database.php';
 
     $setupHelp = $_POST["setupHelp"];
 
-$mail = 'dummymail';
+
+    $mail = 'dummymail';
 
     $database = new Database('../db.json', true);
     $database->connectDB();
 
-    $insertUser = $database->conn->prepare( 'INSERT INTO `user` (mail, first_name, infix, last_name, birth_date, phone, street, house_number, postal_code, city, country) 
+    $insertUser = $database->conn->prepare( 'INSERT INTO `user` (mail, first_name, infix, last_name, birth_date, phone, street, house_number, postal_code, city, country)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);' );
     try {
         $insertUser->bind_param('sssssssisss', $mail, $firstName, $infix, $lastName, $birthDate, $phoneNr, $street, $houseNr, $postalCode, $city, $country);
