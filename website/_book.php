@@ -32,11 +32,14 @@
                 }
             }
         </script>
-        <?php include "book_form.php"; ?>
+        <?php //include "book_form.php"; ?>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            echo "<p style=\"color: white;\">data submitted successfully!";
+            include "book_order.php";
+        } else {
             include "book_form.php";
-        };
+        }
         ?>
     </div>
     <div class="map">
@@ -88,8 +91,6 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
         <script src='wwwroot/js/cart.js'></script>
     </div>
-    </div>
-
     <div class="bookCart">
         Winkelwagen
         <!--  Cart Items -->
