@@ -11,11 +11,11 @@
         <div class="bookHome2">
             <div class="startDate">
                 <label for="bookStart">Aankomst:</label>
-                <input type="date" name="bookStart" id="bookStart" max="">
+                <input type="date" name="bookStart" id="bookStart" min="<?php echo date("Y-m-d"); ?>">
             </div>
             <div class="endDate">
                 <label for="bookEnd">Vertrek:</label>
-                <input type="date" name="bookEnd" id="bookEnd" min="">
+                <input type="date" name="bookEnd" id="bookEnd" min="<?php echo date("Y-m-d"); ?>">
             </div>
             <div class="peopleAmount">
                 <label for="bookQuantity">Hoeveel mensen:</label>
@@ -23,22 +23,27 @@
             </div>
         </div>
         <script>
-            var bookQuantity = document.getElementById("bookQuantity").value;
-            var bookStart = document.getElementById("bookStart").value;
-            var bookEnd = document.getElementById("bookEnd").value;
-
             function go() {
+                var bookQuantity = document.getElementById("bookQuantity").value;
+                var bookStart = document.getElementById("bookStart").value;
+                var bookEnd = document.getElementById("bookEnd").value;
+
                 var obfuscatedData = btoa(JSON.stringify({
                     'bookQuantity': bookQuantity,
                     'bookStart': bookStart,
                     'bookEnd': bookEnd
-                }));
-
+                }))
                 // save to local storage
                 localStorage.setItem("obfuscatedData", obfuscatedData);
-            }
+
+            };
+
 
             function validateForm() {
+                var bookQuantity = document.getElementById("bookQuantity").value;
+                var bookStart = document.getElementById("bookStart").value;
+                var bookEnd = document.getElementById("bookEnd").value;
+
                 if (new Date(bookStart) >= new Date(bookEnd)) {
                     document.getElementById("bookStart").value = "";
                     document.getElementById("bookEnd").value = "";
@@ -47,7 +52,7 @@
                 } else {
                     go();
                 }
-            }
+            };
         </script>
         <button class="submit" type="submit" value="GO" onclick="validateForm()">Go!</button>
     </form>
