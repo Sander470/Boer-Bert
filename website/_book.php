@@ -6,7 +6,7 @@
 <body>
 <div class="formContainer">
     <div class="bookingForm">
-        <script>
+        <script defer>
             window.onload = function get() {
                 // cleanup link
                 var urlWithoutParams = window.location.href.split('?')[0];
@@ -26,9 +26,12 @@
                     console.log(deobfuscatedData.bookEnd);
 
                     // set values to input
-                    document.getElementById('bookQuantity').value = deobfuscatedData.bookQuantity;
+                    document.getElementById('numOfPeople').value = deobfuscatedData.bookQuantity;
                     document.getElementById('bookStart').value = deobfuscatedData.bookStart;
                     document.getElementById('bookEnd').value = deobfuscatedData.bookEnd;
+                    
+                    // clear local storage
+                    localStorage.clear();
                 }
             }
         </script>
@@ -42,7 +45,7 @@
         ?>
     </div>
     <div class="map">
-        <img src="wwwroot/img/BoerBert.jpeg" alt="map of the boer himself"/>
+        <img src="wwwroot/img/mapBM.jpg" alt="map of camping"/>
     </div>
 </div>
 <section id="cartBooking">
