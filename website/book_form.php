@@ -8,7 +8,7 @@
     </div>
 
     <div class="formRow inlineFormRow">
-    <label for="mail">E-mail</label>
+        <label for="mail">E-mail</label>
         <input type="email" id="mail" name="mail" class="formInput" required placeholder="E-mail">
     </div>
 
@@ -20,12 +20,12 @@
     <div class="formRow inlineFormRow">
         <label for="fieldNr">Veldnummer</label>
         <select name="fieldNr" id="fieldNr" class="formInput">
-            <option value="A0">A0</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
             <option value="A3">A3</option>
             <option value="A4">A4</option>
             <option value="A5">A5</option>
+            <option value="A6">A6</option>
             <option disabled>etc...</option>
         </select>
     </div>
@@ -87,6 +87,19 @@
             <option value="nee" selected>nee</option>
         </select>
     </div>
+    <script>
+        function validateForm() {
+            var bookStart = document.getElementById("bookStart").value;
+            var bookEnd = document.getElementById("bookEnd").value;
 
-    <input class="submit" type="submit">
+            if (new Date(bookStart) >= new Date(bookEnd)) {
+                document.getElementById("bookStart").value = "";
+                document.getElementById("bookEnd").value = "";
+                alert("Aankomstdatum moet vóór vertrekdatum liggen");
+                event.preventDefault();
+            }
+        };
+    </script>
+    <input class="submit" type="submit" onclick="validateForm()">
+
 </form>
