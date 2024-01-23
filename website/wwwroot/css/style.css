@@ -188,6 +188,7 @@ body {
     width: 50svw;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     padding: 2svh;
     margin: 2svh;
     box-shadow: 1svh 1svh var(--shadow);
@@ -196,10 +197,10 @@ body {
 .startDate input[type="date"],
 .endDate input[type="date"],
 .peopleAmount input[type="number"]{
-    display: grid;
+    display: flex;
     width: 110%;
     border-radius: 0.55rem;
-    padding: 0,5rem;
+    padding: 0.5rem;
     background-color: var(--offwhite);
     border: none;
 }
@@ -439,171 +440,6 @@ form .name {
 .submit:hover {
     cursor: pointer;
     transform: translateY(-3px);
-}
-
-
-/* The shopping cart */
-
-#cartBooking {
-    display: flex;
-    height: 100svh;
-    width: 100%;
-    justify-content: space-evenly;
-    padding: 10svh;
-}
-
-.bookOptions,
-.bookCart {
-    background-color: var(--green);
-    color: var(--cyan);
-    height: 70svh;
-    width: 40svw;
-    display: block;
-    text-align: center;
-    border-radius: 5svh;
-    box-shadow: 2svh 2svh var(--shadow);
-    padding: 2svh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.confirmBook{
-    color: var(--offwhite);
-    font-size: large;
-    text-align: center;
-}
-
-.g-price {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-.g-price {
-    margin: 8px 0;
-}
-
-.containerCart {
-    width: 90%;
-    max-width: 780px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-}
-
-.menu-item {
-    border-radius: 20px 0 0 20px;
-    border-color: var(--cyan);
-    margin: 30px 0;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu-item img {
-    width: 150px;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-}
-
-.menu-item .add-button {
-    border: none;
-    background: var(--cyan);
-    padding: 6px 20px 4px;
-    border-radius: 20px;
-    color: var(--offwhite);
-    font-weight: 700;
-    font-size: 16px;
-    transition: all 0.3s;
-    align-self: flex-end;
-}
-
-.menu-item .add-button:hover {
-    background: var(--dark);
-}
-
-.menu-item-dets {
-    margin-left: 150px;
-    padding-bottom: 15px;
-}
-
-.menu-item-heading {
-    font-size: 18px;
-    margin: 10px 0 12px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.cart-item {
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid var(--cyan);
-    animation: fadeIn 0.3s;
-}
-
-.cart-item:last-child {
-    border-bottom: 5px solid var(--cyan);
-}
-
-.cart-item img {
-    width: 65px;
-}
-
-.cart-item .g-price {
-    font-size: 24px;
-}
-
-.cart-item-dets {
-    margin-left: 15px;
-    width: 100%;
-}
-
-.cart-item-heading {
-    margin: 10px 0;
-}
-
-.cart-math-item {
-    margin: 5px 0;
-    font-weight: 700;
-}
-
-.cart-math-item span,
-.cart-math-item button {
-    display: inline-block;
-    text-align: right;
-}
-
-.cart-math-item button {
-    text-align: center;
-}
-
-.cart-math-item .cart-math-header {
-    width: 50%;
-}
-
-.cart-math-item .g-price {
-    width: 40%;
 }
 
 /* Chatbot and chatbox */

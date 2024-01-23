@@ -10,15 +10,15 @@
     <form class="bookHome1" action="book.php">
         <div class="bookHome2">
             <div class="startDate">
-                <label for="bookStart">Aankomst:</label>
+                <label for="bookStart">Aankomst</label>
                 <input type="date" name="bookStart" id="bookStart" min="<?php echo date("Y-m-d"); ?>">
             </div>
             <div class="endDate">
-                <label for="bookEnd">Vertrek:</label>
+                <label for="bookEnd">Vertrek</label>
                 <input type="date" name="bookEnd" id="bookEnd" min="<?php echo date("Y-m-d"); ?>">
             </div>
             <div class="peopleAmount">
-                <label for="bookQuantity">Hoeveel mensen:</label>
+                <label for="bookQuantity">Hoeveel mensen</label>
                 <input type="number" id="bookQuantity" name="bookQuantity" min="1" max="10" placeholder="0">
             </div>
         </div>
