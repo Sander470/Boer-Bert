@@ -37,9 +37,10 @@
         </script>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            echo "<p style=\"color: white;\">Form submitted successfully!";
+            echo "<p class=\"confirmBook\">Form submitted successfully!";
             include "book_order.php";
         } else {
+            echo "<p>Form not submitted.";
             include "book_form.php";
         }
         ?>

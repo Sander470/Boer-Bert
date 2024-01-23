@@ -462,6 +462,12 @@ form .name {
     overflow-x: hidden;
 }
 
+.confirmBook{
+    color: var(--offwhite);
+    font-size: large;
+    text-align: center;
+}
+
 .g-price {
     font-size: 32px;
     font-weight: 700;

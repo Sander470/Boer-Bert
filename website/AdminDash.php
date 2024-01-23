@@ -15,14 +15,7 @@ echo "<p class='gateText'>$jsonString<p>";
     </form>
 </body>
 <script>
-    logState();
     let gateStatus;
-    async function logState() {
-        const response = await fetch("configGate.json");
-        const jsonData = await response.json(["gateState"]);
-        console.log("status gate: " + jsonData["gateState"]);
-        gateStatus = jsonData["gateState"];
-    };
 
     function sendData () {
   // (A) GET FORM DATA
