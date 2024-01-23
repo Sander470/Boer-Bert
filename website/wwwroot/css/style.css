@@ -193,12 +193,17 @@ body {
     box-shadow: 1svh 1svh var(--shadow);
 }
 
-.startDate,
-.endDate,
-.peopleAmount {
+.startDate input[type="date"],
+.endDate input[type="date"],
+.peopleAmount input[type="number"]{
     display: grid;
-    width: 25%;
+    width: 110%;
+    border-radius: 0.55rem;
+    padding: 0,5rem;
+    background-color: var(--offwhite);
+    border: none;
 }
+
 
 /* information Home*/
 .infoHome {
