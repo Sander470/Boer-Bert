@@ -91,6 +91,126 @@
     {
       "question": "Mag ik kinderen meenemen naar de camping?",
       "answer": "Ja wij zijn een familie vriendelijke camping"
-    }
+    },
+    {
+        "question": "Zijn huisdieren toegestaan op de camping?",
+        "answer": "Ja, huisdieren zijn welkom op onze camping. Zorg ervoor dat ze aangelijnd zijn en houd rekening met andere gasten."
+      },
+      {
+        "question": "Zijn er stroomaansluitingen beschikbaar op de kampeerplekken?",
+        "answer": "Ja, we bieden stroomaansluitingen op de kampeerplekken. U kunt hiervoor een speciale kabel meenemen of deze bij de receptie aanschaffen."
+      },
+      {
+        "question": "Heeft de camping een winkel waar ik basisbenodigdheden kan kopen?",
+        "answer": "Ja, we hebben een campingwinkel waar u basisbenodigdheden, kampeeruitrusting en snacks kunt kopen."
+      },
+      {
+        "question": "Zijn er vuurwerkvrije zones op de camping?",
+        "answer": "Ja, we hebben vuurwerkvrije zones voor gasten die rust zoeken tijdens vuurwerkevenementen of specifieke periodes."
+      },
+      {
+        "question": "Zijn er specifieke regels met betrekking tot geluidsoverlast op de camping?",
+        "answer": "Ja, we hebben regels om geluidsoverlast te beperken en ervoor te zorgen dat alle gasten een rustige ervaring hebben. Houd rekening met de aangegeven stilte-uren."
+      },
+      {
+        "question": "Biedt de camping fietsverhuur aan?",
+        "answer": "Ja, we hebben fietsverhuur beschikbaar voor gasten die de omgeving per fiets willen verkennen. Informeer bij de receptie voor tarieven en beschikbaarheid."
+      },
+      {
+        "question": "Zijn er picknickplaatsen op de camping?",
+        "answer": "Ja, we hebben aangewezen picknickplaatsen waar gasten kunnen genieten van een maaltijd in de buitenlucht."
+      },
+      {
+        "question": "Kunnen we een extra tent op onze kampeerplek opzetten?",
+        "answer": "Ja, in de meeste gevallen kunt u een extra tent opzetten. Neem contact op met de receptie voor toestemming en eventuele extra kosten."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van elektrische apparaten op de camping?",
+        "answer": "Ja, er zijn regels om ervoor te zorgen dat het gebruik van elektrische apparaten veilig is op de camping. Volg de richtlijnen en vraag bij de receptie om meer informatie."
+      },
+      {
+        "question": "Biedt de camping recyclingfaciliteiten?",
+        "answer": "Ja, we hebben recyclingfaciliteiten op de camping. Help ons alstublieft bij het scheiden van afval om ons milieu te beschermen."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van houtskool- of gasbarbecues op de kampeerplekken?",
+        "answer": "Ja, er zijn regels voor het gebruik van barbecues. Zorg ervoor dat ze op een veilige afstand van tenten en andere kampeerders worden geplaatst, en volg de aangegeven veiligheidsvoorschriften."
+      },
+      {
+        "question": "Biedt de camping een ophaalservice vanaf het dichtstbijzijnde trein- of busstation?",
+        "answer": "Ja, we bieden een ophaalservice vanaf het dichtstbijzijnde trein- of busstation. Gelieve vooraf contact met ons op te nemen om dit te regelen."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van drones op de camping?",
+        "answer": "Ja, we hebben regels voor het gebruik van drones om de privacy en veiligheid van alle gasten te waarborgen. Raadpleeg de receptie voor meer informatie."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van open vuur of kooktoestellen buiten de aangewezen kampvuurzones?",
+        "answer": "Ja, het gebruik van open vuur buiten de aangewezen zones is niet toegestaan. Kooktoestellen dienen veilig te worden gebruikt, en er gelden specifieke regels om brandgevaar te minimaliseren."
+      },
+      {
+        "question": "Is er een EHBO-post op de camping?",
+        "answer": "Ja, we hebben een EHBO-post op de camping. Voor medische noodgevallen kunt u onmiddellijk contact opnemen met de receptie."
+      },
+      {
+        "question": "Biedt de camping speciale voorzieningen voor mindervalide gasten?",
+        "answer": "Ja, we streven ernaar om onze faciliteiten toegankelijk te maken voor mindervalide gasten. Informeer bij de receptie over beschikbare voorzieningen en assistentie."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van drones op de camping?",
+        "answer": "Ja, we hebben regels voor het gebruik van drones om de privacy en veiligheid van alle gasten te waarborgen. Raadpleeg de receptie voor meer informatie."
+      },
+      {
+        "question": "Zijn er specifieke regels voor nachtelijke aankomst op de camping?",
+        "answer": "Ja, er zijn regels voor nachtelijke aankomst. Gelieve vooraf contact met ons op te nemen om afspraken te maken over late aankomsttijden en incheckprocedures."
+      },
+      {
+        "question": "Biedt de camping een afvalinzamelingsservice op de kampeerplekken?",
+        "answer": "Ja, we hebben afvalinzamelingsservice op de kampeerplekken. Volg de instructies en maak gebruik van de daarvoor bestemde containers."
+      },
+      {
+        "question": "Is er een speciaal gebied voor gezinnen met kinderen op de camping?",
+        "answer": "Ja, we hebben speciale kampeerplekken die ideaal zijn voor gezinnen met kinderen. Informeer bij de receptie voor beschikbaarheid en reserveringen."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van generatoren op de kampeerplekken?",
+        "answer": "Ja, we hebben regels voor het gebruik van generatoren om geluidsoverlast te voorkomen. Gebruik ze alleen tijdens de aangewezen uren en respecteer de privacy van andere kampeerders."
+      },
+      {
+        "question": "Biedt de camping fiets- of wandelroutes in de omgeving?",
+        "answer": "Ja, we hebben kaarten met fiets- en wandelroutes beschikbaar bij de receptie. Informeer naar de mogelijkheden voor het verkennen van de prachtige omgeving."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van campingverlichting 's nachts?",
+        "answer": "Ja, er zijn regels voor het gebruik van campingverlichting om de nachtelijke rust te behouden. Gebruik dimbare lichten en vermijd overmatige verlichting in de kampeerzones."
+      },
+      {
+        "question": "Kan ik mijn kampeerplek van tevoren kiezen bij het maken van een reservering?",
+        "answer": "Ja, in veel gevallen kunt u uw kampeerplek van tevoren kiezen bij het maken van een reservering. Neem contact op met de receptie voor beschikbaarheid en mogelijkheden."
+      },
+      {
+        "question": "Zijn er wateraansluitingen op de kampeerplekken?",
+        "answer": "Ja, we bieden wateraansluitingen op de kampeerplekken. Zorg ervoor dat u de juiste slangen en koppelingen heeft voor een probleemloze aansluiting."
+      },
+      {
+        "question": "Biedt de camping een wasserette voor gasten?",
+        "answer": "Ja, we hebben een wasserette op de camping met wasmachines en drogers. U kunt hier gebruik van maken tijdens uw verblijf."
+      },
+      {
+        "question": "Zijn er regels voor het gebruik van recreatieve voertuigen (RV's) op de camping?",
+        "answer": "Ja, er zijn regels voor het gebruik van recreatieve voertuigen. Volg de aangegeven routes, parkeer alleen op de daarvoor bestemde plaatsen en respecteer de rust van andere gasten."
+      },
+      {
+        "question": "Zijn er speciale evenementen of activiteiten tijdens vakantieperiodes?",
+        "answer": "Ja, we organiseren vaak speciale evenementen en activiteiten tijdens vakantieperiodes. Bekijk onze evenementenkalender voor details en planning."
+      },
+      {
+        "question": "Biedt de camping een kluisje of opslagruimte voor waardevolle spullen?",
+        "answer": "Ja, we bieden kluisjes of opslagruimte voor waardevolle spullen. Neem contact op met de receptie voor het regelen van deze faciliteit."
+      },
+      {
+        "question": "Zijn er specifieke regels voor het gebruik van drones op de camping?",
+        "answer": "Ja, we hebben regels voor het gebruik van drones om de privacy en veiligheid van alle gasten te waarborgen. Raadpleeg de receptie voor meer informatie."
+      }
   ]
 }
