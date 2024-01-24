@@ -3,7 +3,6 @@ use processing\Database;
 include 'processing/Database.php';
 
 //if (isset($_POST["submit"])) {
-    echo '<h1>WORKING!</h1>';
 
     $firstName = $_POST["firstName"];
     $infix = $_POST["infix"];

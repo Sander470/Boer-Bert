@@ -37,9 +37,10 @@
         </script>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            echo "<p style=\"color: white;\">Form submitted successfully!";
+            echo "<p class=\"confirmBook\">Form submitted successfully!";
             include "book_order.php";
         } else {
+            echo "<p>Form not submitted.";
             include "book_form.php";
         }
         ?>
@@ -48,62 +49,7 @@
         <img src="wwwroot/img/mapBM.jpg" alt="map of camping"/>
     </div>
 </div>
-<section id="cartBooking">
-    <div class="bookOptions">
-        Opties
-        <div class="containerCart">
-            <ul class="menu-items">
-                <!--    1    -->
-                <li class="menu-item">
-                    <div class="menu-item-dets">
-                        <p class="menu-item-heading">Plot 3, 1 week, caravan</p>
-                        <p class="g-price">€150</p>
-                    </div>
-                    <button class="add-button" data-title="Plot 3, 1 week, caravan" data-price="150">Add to Cart
-                    </button>
-                </li>
-                <!--    2    -->
-                <li class="menu-item">
-                    <div class="menu-item-dets">
-                        <p class="menu-item-heading">Plot 3, 1 week, tent</p>
-                        <p class="g-price">€100</p>
-                    </div>
-                    <button class="add-button" data-title="Plot 3, 1 week, tent" data-price="100">Add to Cart</button>
-                </li>
-                <!--    3    -->
-                <li class="menu-item">
-                    <div class="menu-item-dets">
-                        <p class="menu-item-heading">Plot 3, 2 weken, caravan</p>
-                        <p class="g-price">€300</p>
-                    </div>
-                    <button class="add-button" data-title="Plot 3, 2 weken, caravan" data-price="300">Add to Cart
-                    </button>
-                </li>
-                <!--    4    -->
-                <li class="menu-item">
-                    <div class="menu-item-dets">
-                        <p class="menu-item-heading">Plot 3, 2 weken, tent</p>
-                        <p class="g-price">€200</p>
-                    </div>
-                    <button class="add-button" data-title="Plot 3, 2 weken, tent" data-price="200">Add to Cart</button>
-                </li>
-            </ul>
-        </div>
-        <!-- Javascript and JQuery -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-        <script src='wwwroot/js/cart.js'></script>
-    </div>
-    <div class="bookCart">
-        Winkelwagen
-        <!--  Cart Items -->
-        <ul class="cart-items">
-        </ul>
 
-            <div class="cart-math">
-                <p>Add items to cart</p>
-            </div>
-        </div>
-    </section>
     <!-- Chatbox and chatbot -->
     <div class="chatBot">
         <script type="module" src="wwwroot/js/chat.js" defer></script>
