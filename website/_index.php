@@ -57,7 +57,7 @@
         <button class="submit" type="submit" value="GO" onclick="validateForm()">Go!</button>
     </form>
     <section class="infoHome">
-        <div class="title">Informatie over de camping</div>
+        <p class="title">Informatie over de camping</p>
         <div class="cards">
             <div class="card">
                 <div class="cardTitle">De camping</div>
@@ -79,7 +79,7 @@
     <section>
         <div class="reviewHome">
             <div class="HomeReview">
-                <div class="title">Reviews</div>
+                <p class="title">Reviews</p>
                 <div class="bigReview">
                     <div class="bigStar">4.6/5</div>
                     <div class="bigName">gemiddelde beoordeling camping Bos Mortuus</div>
@@ -109,7 +109,7 @@
         <div class="aboutHome">
             <img src="wwwroot/img/BoerBert.jpeg">
             <div class="aboutCard" onclick="location.href='#'">
-                <div class="title">Over ons</div>
+                <p class="title">Over ons</p>
                 <div class="abtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet risus nullam eget felis. Sem viverra aliquet eget sit. Auctor urna nunc id cursus metus aliquam eleifend mi. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Faucibus nisl tincidunt eget nullam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Aliquam ut porttitor leo a diam. Cursus risus at ultrices mi tempus. Et pharetra pharetra massa massa ultricies mi quis.</div>
             </div>
         </div>

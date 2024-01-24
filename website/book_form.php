@@ -83,8 +83,8 @@
     <div class="formRow inlineFormRow">
         <label for="setupHelp">Hulp bij opzetten tent/caravan/camper</label>
         <select name="setupHelp" id="setupHelp" class="formInput">
-            <option value="ja">ja</option>
-            <option value="nee" selected>nee</option>
+            <option value="1">ja</option>
+            <option value="0" selected>nee</option>
         </select>
     </div>
     <script>
