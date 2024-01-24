@@ -487,6 +487,13 @@ form .name {
     transform: translateY(-3px);
 }
 
+.confirmBook{
+    color: var(--offwhite);
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* Chatbot and chatbox */
 .chatbot-toggler {
     position: fixed;
