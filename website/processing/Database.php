@@ -6,7 +6,7 @@ use mysqli;
 
 class Database
 {
-    private mysqli $conn;
+    public mysqli $conn;
     private $host;
     private $username;
     private $password;
@@ -31,30 +31,30 @@ class Database
         $this->password = $data->password;
         $this->dbname = $data->dbname;
         $this->debug = $debug;
+
+//        echo $this->host . $this->username . $this->password . $this->dbname;
     }
 
-    public function insertContactDetails($mail, $name, $message): void
-    {
-        $this->connectDB();
-        // PREPARED statement
-        $prepared = $this->conn->prepare('INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);');
-        $prepared->bind_param('sss', $mail, $name, $message);
-        $this->query($prepared);
-        $this->disconnectDB();
-    }
+//    public function insertContactDetails($mail, $name, $message): void
+//    {
+//        $this->connectDB();
+//        // PREPARED statement
+//        $prepared = $this->conn->prepare( 'INSERT INTO contactForm (mail, name, message) VALUES (?, ?, ?);' );
+//        $prepared->bind_param('sss', $mail, $name, $message);
+//        $this->query($prepared);
+//        $this->disconnectDB();
+//    }
 
     private function query($prepared): void
     {
         try {
             $prepared->execute();
             if($this->debug) {
-                echo '<br>Inserted successfully!';
+                echo '<br>executed successfully!';
             }
         } catch (Exception $e) {
             if (str_contains($e->getMessage(), 'Duplicate entry')) {
-//                echo '<br><h1>You have already sent this message.</h1>';
-//                echo '<h1><a href="javascript:history.go(-1)" style="text-decoration: underline; color: var(--secondaryTxt)">
-//                Go back</a></h1>';
+                // error code for duplicate entry in database
                 $this->disconnectDB();
                 exit;
             }
@@ -64,7 +64,7 @@ class Database
         }
     }
 
-    private function connectDB(): void
+    public function connectDB(): void
     {
         try {
             $this->conn = new mysqli($this->host, $this->username, $this->password, $this->dbname);
@@ -80,7 +80,7 @@ class Database
         }
     }
 
-    private function disconnectDB(): void
+    public function disconnectDB(): void
     {
         $this->conn->close();
         if($this->debug) {

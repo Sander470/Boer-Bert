@@ -30,6 +30,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    z-index: 10;
 }
 
 .navbar {
@@ -38,7 +39,6 @@ body {
     display: flex;
     justify-content: space-around;
     position: sticky;
-    z-index: 10;
     align-items: center;
     box-shadow: 0 1svh var(--shadow);
 }
@@ -49,7 +49,6 @@ body {
 }
 
 .footer {
-    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -151,11 +150,17 @@ body {
 
 /* 404 */
 .pageNotfound {
-    height: 70svh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10%;
+    display: grid;
+    justify-content:center;
+    padding: 5%;
+}
+.pageNotfound img{
+    height: 50svh;
+    width: auto;
+    margin: 5svh;
+    border-radius: 5svh;
+    padding: 0%;
 }
 
 /* General style other pages */
@@ -300,18 +305,30 @@ body {
 
 /* Booking pagina */
 .formContainer {
-    height: 100svh;
+    min-height: calc(100svh - (2 * 0.5svh) - 13px);
     width: 100%;
     background-color: var(--green);
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formContainer>div {
+    width: 40%;
+    min-height: 80vh;
     justify-content: center;
+    justify-self: center;
+}
+
+.map img {
+    height: inherit;
+    width: 100%;
+    border-radius: 5svh;
 }
 
 .bookingForm {
     color: var(--cyan);
     display: grid;
-    min-height: 50%;
-    width: 50%;
     justify-content: center;
     margin: 10svh;
     background-color: var(--cyan);
@@ -330,8 +347,8 @@ body {
 }
 
 .bookingForm input[type="text"] {
-    background-color: var(--offwhite);
-    color: var(--cyan);
+    background-color: var(--cyan);
+    color: var(--offwhite);
     font-size: medium;
     border: none;
     border-radius: 1.2rem;
@@ -365,35 +382,44 @@ form .name {
     color: var(--offwhite);
 }
 
-.formEntry {
+.inlineFormRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--offwhite);
-    padding: 0.5rem;
-    border-radius: 1rem;
 }
 
-.tallFormEntry {
-    background: var(--offwhite);
+.formRow {
+    padding: 0.5rem;
     border-radius: 1rem;
-    height: auto;
+    background-color: var(--offwhite);
+}
+
+
+.stackedFormRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formRowStack {
+    border-radius: 1rem;
+    background: var(--offwhite);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.map img {
-    width: auto;
-    height: 80svh;
-    margin: 10svh;
-    border-radius: 5svh;
-}
+::placeholder {
+    color: var(--offwhite);
+    opacity: 1; /* Firefox */
+  }
 
 .submit {
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 1.5rem;
+    /* padding: 0.5rem; */
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
     justify-self: center;
     border: none;
     background-color: var(--dark);
@@ -409,6 +435,7 @@ form .name {
     cursor: pointer;
     transform: translateY(-3px);
 }
+
 
 /* The shopping cart */
 
@@ -555,9 +582,11 @@ ul {
     display: inline-block;
     text-align: right;
 }
+
 .cart-math-item button {
     text-align: center;
 }
+
 .cart-math-item .cart-math-header {
     width: 50%;
 }
@@ -565,23 +594,23 @@ ul {
 .cart-math-item .g-price {
     width: 40%;
 }
+
 /* Chatbot and chatbox */
 .chatbot-toggler {
-position: fixed;
-bottom: 30px;
-right: 35px;
-outline: none;
-border: none;
-height: 50px;
-width: 50px;
-display: flex;
-cursor: pointer;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-background: var(--cyan);
-transition: all 0.2s ease;
-box-shadow: 2px 2px 2px var(--shadow);
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #724ae8;
+    transition: all 0.2s ease;
 }
 
 body.show-chatbot .chatbot-toggler {
@@ -589,8 +618,8 @@ body.show-chatbot .chatbot-toggler {
 }
 
 .chatbot-toggler span {
-color: var(--offwhite);
-position: absolute;
+    color: #fff;
+    position: absolute;
 }
 
 .chatbot-toggler span:last-child,
@@ -603,19 +632,19 @@ body.show-chatbot .chatbot-toggler span:last-child {
 }
 
 .chatbot {
-position: fixed;
-right: 35px;
-bottom: 90px;
-width: 420px;
-background: var(--offwhite);
-border-radius: 15px;
-overflow: hidden;
-opacity: 0;
-pointer-events: none;
-transform: scale(0.5);
-transform-origin: bottom right;
-box-shadow: 0 0 128px 0 var(--shadow), 0 32px 64px -48px var(--shadow);
-transition: all 0.1s ease;
+    position: fixed;
+    right: 35px;
+    bottom: 90px;
+    width: 420px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
 }
 
 body.show-chatbot .chatbot {
@@ -625,12 +654,12 @@ body.show-chatbot .chatbot {
 }
 
 .chatbot header {
-padding: 16px 0;
-position: relative;
-text-align: center;
-color: var(--offwhite);
-background: var(--cyan);
-box-shadow: 0 2px 10px var(--shadow);
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #724ae8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chatbot header span {
@@ -657,13 +686,13 @@ header h2 {
 }
 
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
-background: var(--offwhite);
-border-radius: 25px;
+    background: #fff;
+    border-radius: 25px;
 }
 
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
-background: var(--offwhite);
-border-radius: 25px;
+    background: #ccc;
+    border-radius: 25px;
 }
 
 .chatbox .chat {
@@ -677,26 +706,26 @@ border-radius: 25px;
 }
 
 .chatbox .incoming span {
-width: 32px;
-height: 32px;
-color: var(--offwhite);
-cursor: default;
-text-align: center;
-line-height: 32px;
-align-self: flex-end;
-background: var(--cyan);
-border-radius: 4px;
-margin: 0 10px 7px 0;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    cursor: default;
+    text-align: center;
+    line-height: 32px;
+    align-self: flex-end;
+    background: #724ae8;
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
 }
 
 .chatbox .chat p {
-white-space: pre-wrap;
-padding: 12px 16px;
-border-radius: 10px 10px 0 10px;
-max-width: 75%;
-color: var(--offwhite);
-font-size: 0.95rem;
-background: var(--cyan);
+    white-space: pre-wrap;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    max-width: 75%;
+    color: #fff;
+    font-size: 0.95rem;
+    background: #724ae8;
 }
 
 .chatbox .incoming p {
@@ -704,51 +733,49 @@ background: var(--cyan);
 }
 
 .chatbox .chat p.error {
-color: #d10519;
-background: var(--dark);
+    color: #721c24;
+    background: #f8d7da;
 }
 
 .chatbox .incoming p {
-color: var(--cyan);
-background: var(--green);
+    color: #000;
+    background: #f2f2f2;
 }
 
 .chatbot .chat-input {
-display: flex;
-gap: 5px;
-position: absolute;
-bottom: 0;
-width: 100%;
-background: var(--cyan);
-padding: 3px 20px;
-border-top: 1px solid var(--cyan);
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 3px 20px;
+    border-top: 1px solid #ddd;
 }
 
 .chat-input textarea {
-height: 55px;
-width: 100%;
-border: none;
-outline: none;
-resize: none;
-max-height: 180px;
-padding: 15px 15px 15px 0;
-font-size: 0.95rem;
-background-color: var(--cyan);
-color: var(--offwhite);
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 180px;
+    padding: 15px 15px 15px 0;
+    font-size: 0.95rem;
 }
 
 .chat-input span {
-align-self: flex-end;
-color: var(--offwhite);
-cursor: pointer;
-height: 55px;
-display: flex;
-align-items: center;
-visibility: hidden;
-font-size: 1.35rem;
+    align-self: flex-end;
+    color: #724ae8;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    font-size: 1.35rem;
 }
 
-.chat-input textarea:valid ~ span {
+.chat-input textarea:valid~span {
     visibility: visible;
 }
 
@@ -778,4 +805,24 @@ font-size: 1.35rem;
     .chatbot header span {
         display: block;
     }
+}
+/* Admin Dashboard */
+.gateButton {
+    width: 12rem;
+    background: var(--cyan);
+    border: none;
+    border-radius: 0.55rem;
+    padding: 0.75rem;
+    color: var(--offwhite);
+    margin: 1rem;
+}
+
+.gateButton:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.gateText{
+    color: var(--cyan);
+    font-size: 130%;
+    margin: 1rem;
 }
