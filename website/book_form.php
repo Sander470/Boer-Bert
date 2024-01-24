@@ -47,12 +47,12 @@
     <div class="formRowStack">
         <div class="formRow stackedFormRow">
             <label for="bookStart">Aankomst</label>
-            <input class="formInput" type="date" name="bookStart" id="bookStart" value="" required>
+            <input class="formInput" type="date" name="bookStart" id="bookStart" value="" min="<?php echo date("Y-m-d"); ?>" required>
         </div>
 
         <div class="formRow stackedFormRow">
             <label for="bookEnd">Vertrek</label>
-            <input class="formInput" type="date" name="bookEnd" id="bookEnd" value="" required>
+            <input class="formInput" type="date" name="bookEnd" id="bookEnd" value="" min="<?php echo date("Y-m-d"); ?>" required>
         </div>
     </div>
 
