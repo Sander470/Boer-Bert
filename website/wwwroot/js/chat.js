@@ -1,10 +1,18 @@
+// Import the MyConstants class
+import CampingChatbot from './converted.js';
+
+// Create an instance of the class
+const campingBot = new CampingChatbot();
+
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null; // Variable to store user's message
-let botResponse = "Dit is een test"; // Variable to store bot's message
+let botResponse = "Error, something went wrong"; // Variable to store bot's message
+let phase = 0;
+let parser = true;
 const inputInitHeight = chatInput.scrollHeight;
 const createChatLi = (message, className) => {
   // Create a chat <li> element with passed message and className
@@ -16,42 +24,22 @@ const createChatLi = (message, className) => {
   return chatLi;
 }
 
-// const generateResponse = () => {
-//       const requestOptions = {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//           question: userMessage, // Send the user's message as a question
-//         })
-//       };
-
-//       // Send POST request to API
-//       fetch(botResponse, requestOptions)
-//         .then(response => response.json())
-//         .then(data => {
-//           console.log('API Response:', data);
-//           // Process the API response data
-//           const answer = data.answer;
-//           chatbox.appendChild(createChatLi(answer, "incoming"));
-//           chatbox.scrollTo(0, chatbox.scrollHeight);
-//         })
-
-//       .catch(() => {
-//         console.error('API Error:', error);
-//         // Handle errors
-//         const errorMessage = "Oops! Something went wrong. Please try again.";
-//         chatbox.appendChild(createChatLi(errorMessage, "incoming error"));
-//         chatbox.scrollTo(0, chatbox.scrollHeight);
-//       });
-//   }
-
-function userMessageToPython(um) {
-  um
+function userMessageToCampingbot(um) {
+  console.log(phase);
+  if (phase >= 3) {
+    campingBot.getUserInfo(um, phase, generateResponse);
+  }
+  else if (botResponse.includes("duidelijk")) {
+    botResponse = campingBot.getUserInfo(um, phase, null);
+    phase = 1;
+  } else {
+    botResponse = campingBot.getUserInfo(um, phase, null);
+    phase++;
+  }
+  
 }
 
-function generateResponse() {
+function generateResponse(botResponse) {
   chatbox.appendChild(createChatLi(botResponse, "incoming"));
   chatbox.scrollTo(0, chatbox.scrollHeight);
 }
@@ -66,10 +54,15 @@ const handleChat = () => {
   chatbox.appendChild(createChatLi(userMessage, "outgoing"));
   chatbox.scrollTo(0, chatbox.scrollHeight);
 
-  userMessageToPython(userMessage);
+  userMessageToCampingbot(userMessage);
 
   // Immediately generate the response
-  generateResponse();
+  if (parser){
+    if (phase > 2) {
+      parser = false;
+    }
+    generateResponse(botResponse);
+  }
 }
 
 chatInput.addEventListener("input", () => {

@@ -132,7 +132,8 @@
     </section>
     <!-- Chatbox and chatbot -->
     <div class="chatBot">
-        <script src="wwwroot/js/chat.js" defer></script>
+        <script type="module" src="wwwroot/js/chat.js" defer></script>
+        <script type="javascript" src="wwwroot/js/converted.js" defer></script>
         <button class="chatbot-toggler">
             <span class="material-symbols-rounded">mode_comment</span>
             <span class="material-symbols-outlined">close</span>
@@ -145,7 +146,7 @@
             <ul class="chatbox">
                 <li class="chat incoming">
                     <span class="material-symbols-outlined">smart_toy</span>
-                    <p>Hi! Ik ben jouw camping chatbot.<br>Ik kan jouw helpen met het kiezen van de juiste plek en eventuele andere vragen.</p>
+                    <p>Hi! Ik ben jouw camping chatbot.<br>Ik kan jouw helpen met het kiezen van de juiste plek en eventuele andere vragen.<br><br>Hoe kan ik je noemen?</p>
                 </li>
             </ul>
             <div class="chat-input">
