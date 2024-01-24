@@ -152,10 +152,11 @@ body {
 .pageNotfound {
     width: 100%;
     display: grid;
-    justify-content:center;
+    justify-content: center;
     padding: 5%;
 }
-.pageNotfound img{
+
+.pageNotfound img {
     height: 50svh;
     width: auto;
     margin: 5svh;
@@ -196,7 +197,7 @@ body {
 
 .startDate input[type="date"],
 .endDate input[type="date"],
-.peopleAmount input[type="number"]{
+.peopleAmount input[type="number"] {
     display: flex;
     width: 110%;
     border-radius: 0.55rem;
@@ -213,10 +214,15 @@ body {
     height: 100svh;
     width: 100%;
 }
+.cardTitle{
+    display: grid;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
 
 .cards {
     display: flex;
-    align-content: space-evenly;
     justify-content: space-between;
 }
 
@@ -224,18 +230,23 @@ body {
 .card2 {
     background-color: var(--cyan);
     color: var(--offwhite);
-    padding: 2.5%;
+    padding: 2.5rem;
     margin: 5svh;
     border-radius: 5svh;
-    height: 60svh;
+    height: 65svh;
     width: 25%;
     box-shadow: 2svh 2svh var(--shadow);
 }
 
 .card2 {
-    margin-top: 30svh;
+    margin-top: 25svh;
 }
-
+.cardIMG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+}
 /* Reviews*/
 .reviewHome {
     background-color: var(--cyan);
@@ -254,9 +265,12 @@ body {
 .bigReview {
     background-color: var(--green);
     color: var(--cyan);
+    font-size:xx-large;
     align-self: center;
+    text-align: center;
     width: 50svw;
     height: 30svh;
+    padding: 0.5rem;
     border-radius: 5svh;
     box-shadow: 2svh 2svh var(--shadow);
 }
@@ -267,6 +281,27 @@ body {
     align-content: end;
 }
 
+.rev,
+.stars {
+    display: flex;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.bigStar,
+.stars,
+.cardTitle {
+    display: grid;
+    font-size: larger;
+    font-weight: bolder;
+    text-shadow: 0.2svh 0.2svh var(--shadow);
+}
+.revName{
+    display: grid;
+    text-align: center;
+    padding: 0.5rem;
+    font-style: italic;
+}
 .revHome,
 .revHome2 {
     background-color: var(--green);
@@ -307,6 +342,10 @@ body {
     align-self: center;
     border-radius: 5svh;
     box-shadow: 2svh 2svh var(--shadow);
+    display: grid;
+    text-align: center;
+    padding: 5rem;
+    font-size: large;
 }
 
 /* Booking pagina */
@@ -418,8 +457,9 @@ form .name {
 
 ::placeholder {
     color: var(--offwhite);
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
 
 .submit {
     /* padding: 0.5rem; */
@@ -657,6 +697,7 @@ header h2 {
         display: block;
     }
 }
+
 /* Admin Dashboard */
 .gateButton {
     width: 12rem;
@@ -672,7 +713,8 @@ header h2 {
     cursor: pointer;
     transform: translateY(-3px);
 }
-.gateText{
+
+.gateText {
     color: var(--cyan);
     font-size: 130%;
     margin: 1rem;

@@ -60,16 +60,19 @@
         <div class="title">Informatie over de camping</div>
         <div class="cards">
             <div class="card">
-                <div class="cardTitle"></div>
-                <div class="cardCon"></div>
+                <div class="cardTitle">De camping</div>
+                <img class="cardIMG" src="wwwroot/img/main/cowlogo.png">
+                <div class="cardCon">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet risus nullam eget felis. Sem viverra aliquet eget sit.</div>
             </div>
             <div class="card2">
-                <div class="cardTitle"></div>
-                <div class="cardCon"></div>
+                <div class="cardTitle">Activiteiten</div>
+                <img class="cardIMG" src="wwwroot/img/main/cowlogo.png">
+                <div class="cardCon">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet.</div>
             </div>
             <div class="card">
-                <div class="cardTitle"></div>
-                <div class="cardCon"></div>
+                <div class="cardTitle">Plaatsen</div>
+                <img class="cardIMG" src="wwwroot/img/main/cowlogo.png">
+                <div class="cardCon">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet risus nullam eget felis. </div>
             </div>
         </div>
     </section>
@@ -78,26 +81,26 @@
             <div class="HomeReview">
                 <div class="title">Reviews</div>
                 <div class="bigReview">
-                    <div class="bigStar"></div>
-                    <div class="bigName"></div>
+                    <div class="bigStar">4.6/5</div>
+                    <div class="bigName">gemiddelde beoordeling camping Bos Mortuus</div>
                     <div class="bigText"></div>
                 </div>
             </div>
             <div class="revsHome">
                 <div class="revHome">
-                    <div class="stars"></div>
-                    <div class="revName"></div>
-                    <div class="rev"></div>
+                    <div class="stars">5/5</div>
+                    <div class="revName">Lorem ipsum dolor</div>
+                    <div class="rev">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet risus nullam eget felis. Sem viverra aliquet eget sit. Auctor urna nunc id cursus metus aliquam eleifend mi. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor.</div>
                 </div>
                 <div class="revHome2">
-                    <div class="stars"></div>
-                    <div class="revName"></div>
-                    <div class="rev"></div>
+                    <div class="stars">4/5</div>
+                    <div class="revName">tempor incididunt</div>
+                    <div class="rev">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 </div>
                 <div class="revHome">
-                    <div class="stars"></div>
-                    <div class="revName"></div>
-                    <div class="rev"></div>
+                    <div class="stars">5/5</div>
+                    <div class="revName">consectetur adipiscing</div>
+                    <div class="rev">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. </div>
                 </div>
             </div>
         </div>
@@ -107,7 +110,7 @@
             <img src="wwwroot/img/BoerBert.jpeg">
             <div class="aboutCard" onclick="location.href='#'">
                 <div class="title">Over ons</div>
-                <div class="abtext"></div>
+                <div class="abtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla. Orci nulla pellentesque dignissim enim. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet risus nullam eget felis. Sem viverra aliquet eget sit. Auctor urna nunc id cursus metus aliquam eleifend mi. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Faucibus nisl tincidunt eget nullam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Aliquam ut porttitor leo a diam. Cursus risus at ultrices mi tempus. Et pharetra pharetra massa massa ultricies mi quis.</div>
             </div>
         </div>
     </section>
