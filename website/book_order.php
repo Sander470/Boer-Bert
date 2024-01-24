@@ -3,7 +3,6 @@ use processing\Database;
 include 'processing/Database.php';
 
 //if (isset($_POST["submit"])) {
-    echo '<h1>WORKING!</h1>';
 
     $firstName = $_POST["firstName"];
     $infix = $_POST["infix"];
@@ -31,7 +30,7 @@ include 'processing/Database.php';
 
 
 
-    $database = new Database('../db.json', true);
+    $database = new Database('../db.json', false);
     $database->connectDB();
 
     $insertUser = $database->conn->prepare( 'INSERT INTO `user` (mail, first_name, infix, last_name, birth_date, phone, street, house_number, postal_code, city, country)
@@ -39,45 +38,35 @@ include 'processing/Database.php';
     try {
         $insertUser->bind_param('sssssssisss', $mail, $firstName, $infix, $lastName, $birthDate, $phoneNr, $street, $houseNr, $postalCode, $city, $country);
         $insertUser->execute();
-        echo '<br>inserted data.';
     } catch (Exception $e) {
         echo '<br>' . $e;
     }
 
     // retrieve id from `user` where mail matches $mail from the form
     $fetchId =  $database->conn->prepare( 'SELECT id FROM user WHERE mail = ?' );
-    echo '<br>prepared mailsearch';
     $fetchId->bind_param('s', $mail);
-    echo '<br>bound param for mailsearch';
     try {
         $fetchId->execute();
         $user_id = $fetchId->get_result();
-        echo '<br>executed mailsearch';
         } catch (Exception $e) {
         echo "<br>" . $e;
     }
     if($user_id->num_rows > 0) {
         while($row = $user_id->fetch_assoc()) {
-            echo '<br>id ' . $row["id"];
             try {
                 $insertOrder = $database->conn->prepare( 'INSERT INTO `order` (plot_id, user_id, start_date, end_date, num_people, setup_help, accommodation_type) 
                     VALUES (?, ?, ?, ?, ?, ?, ?);' );
-                echo ' prepared..<br>';
             } catch (Exception $e) {
                 echo '<br>' . $e;
             }
             try {
                 $fieldNr = 3;
-                echo 'assigned vars.. binding..';
-                echo '<br>bookEnd: ' . $bookEnd . "<br> bookStart: " . $bookStart;
                 $insertOrder->bind_param('iissiis', $fieldNr, $user_id, $bookStart, $bookEnd, $numOfPeople, $setupHelp, $placeType);
-                echo ' bound params..';
             } catch (Exception $e) {
                 echo '<br>' . $e;
             }
             try {
                 $insertOrder->execute();
-                echo ' inserted order..';
             } catch (Exception $e) {
                 echo '<br>' . $e;
             }
