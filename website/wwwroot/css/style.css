@@ -152,10 +152,11 @@ body {
 .pageNotfound {
     width: 100%;
     display: grid;
-    justify-content:center;
+    justify-content: center;
     padding: 5%;
 }
-.pageNotfound img{
+
+.pageNotfound img {
     height: 50svh;
     width: auto;
     margin: 5svh;
@@ -188,17 +189,23 @@ body {
     width: 50svw;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     padding: 2svh;
     margin: 2svh;
     box-shadow: 1svh 1svh var(--shadow);
 }
 
-.startDate,
-.endDate,
-.peopleAmount {
-    display: grid;
-    width: 25%;
+.startDate input[type="date"],
+.endDate input[type="date"],
+.peopleAmount input[type="number"] {
+    display: flex;
+    width: 110%;
+    border-radius: 0.55rem;
+    padding: 0.5rem;
+    background-color: var(--offwhite);
+    border: none;
 }
+
 
 /* information Home*/
 .infoHome {
@@ -208,9 +215,15 @@ body {
     width: 100%;
 }
 
+.cardTitle {
+    display: grid;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+
 .cards {
     display: flex;
-    align-content: space-evenly;
     justify-content: space-between;
 }
 
@@ -218,16 +231,23 @@ body {
 .card2 {
     background-color: var(--cyan);
     color: var(--offwhite);
-    padding: 2.5%;
+    padding: 2.5rem;
     margin: 5svh;
     border-radius: 5svh;
-    height: 60svh;
+    height: 65svh;
     width: 25%;
     box-shadow: 2svh 2svh var(--shadow);
 }
 
 .card2 {
-    margin-top: 30svh;
+    margin-top: 25svh;
+}
+
+.cardIMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
 }
 
 /* Reviews*/
@@ -248,9 +268,12 @@ body {
 .bigReview {
     background-color: var(--green);
     color: var(--cyan);
+    font-size: xx-large;
     align-self: center;
+    text-align: center;
     width: 50svw;
     height: 30svh;
+    padding: 0.5rem;
     border-radius: 5svh;
     box-shadow: 2svh 2svh var(--shadow);
 }
@@ -259,6 +282,29 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-content: end;
+}
+
+.rev,
+.stars {
+    display: flex;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.bigStar,
+.stars,
+.cardTitle {
+    display: grid;
+    font-size: larger;
+    font-weight: bolder;
+    text-shadow: 0.2svh 0.2svh var(--shadow);
+}
+
+.revName {
+    display: grid;
+    text-align: center;
+    padding: 0.5rem;
+    font-style: italic;
 }
 
 .revHome,
@@ -301,6 +347,10 @@ body {
     align-self: center;
     border-radius: 5svh;
     box-shadow: 2svh 2svh var(--shadow);
+    display: grid;
+    text-align: center;
+    padding: 5rem;
+    font-size: large;
 }
 
 /* Booking pagina */
@@ -412,8 +462,9 @@ form .name {
 
 ::placeholder {
     color: var(--offwhite);
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
 
 .submit {
     /* padding: 0.5rem; */
@@ -436,165 +487,6 @@ form .name {
     transform: translateY(-3px);
 }
 
-
-/* The shopping cart */
-
-#cartBooking {
-    display: flex;
-    height: 100svh;
-    width: 100%;
-    justify-content: space-evenly;
-    padding: 10svh;
-}
-
-.bookOptions,
-.bookCart {
-    background-color: var(--green);
-    color: var(--cyan);
-    height: 70svh;
-    width: 40svw;
-    display: block;
-    text-align: center;
-    border-radius: 5svh;
-    box-shadow: 2svh 2svh var(--shadow);
-    padding: 2svh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.g-price {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-.g-price {
-    margin: 8px 0;
-}
-
-.containerCart {
-    width: 90%;
-    max-width: 780px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-}
-
-.menu-item {
-    border-radius: 20px 0 0 20px;
-    border-color: var(--cyan);
-    margin: 30px 0;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu-item img {
-    width: 150px;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-}
-
-.menu-item .add-button {
-    border: none;
-    background: var(--cyan);
-    padding: 6px 20px 4px;
-    border-radius: 20px;
-    color: var(--offwhite);
-    font-weight: 700;
-    font-size: 16px;
-    transition: all 0.3s;
-    align-self: flex-end;
-}
-
-.menu-item .add-button:hover {
-    background: var(--dark);
-}
-
-.menu-item-dets {
-    margin-left: 150px;
-    padding-bottom: 15px;
-}
-
-.menu-item-heading {
-    font-size: 18px;
-    margin: 10px 0 12px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.cart-item {
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid var(--cyan);
-    animation: fadeIn 0.3s;
-}
-
-.cart-item:last-child {
-    border-bottom: 5px solid var(--cyan);
-}
-
-.cart-item img {
-    width: 65px;
-}
-
-.cart-item .g-price {
-    font-size: 24px;
-}
-
-.cart-item-dets {
-    margin-left: 15px;
-    width: 100%;
-}
-
-.cart-item-heading {
-    margin: 10px 0;
-}
-
-.cart-math-item {
-    margin: 5px 0;
-    font-weight: 700;
-}
-
-.cart-math-item span,
-.cart-math-item button {
-    display: inline-block;
-    text-align: right;
-}
-
-.cart-math-item button {
-    text-align: center;
-}
-
-.cart-math-item .cart-math-header {
-    width: 50%;
-}
-
-.cart-math-item .g-price {
-    width: 40%;
-}
-
 /* Chatbot and chatbox */
 .chatbot-toggler {
     position: fixed;
@@ -609,8 +501,9 @@ ul {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #724ae8;
+    background: var(--cyan);
     transition: all 0.2s ease;
+    box-shadow: 2px 2px 2px var(--shadow);
 }
 
 body.show-chatbot .chatbot-toggler {
@@ -618,7 +511,7 @@ body.show-chatbot .chatbot-toggler {
 }
 
 .chatbot-toggler span {
-    color: #fff;
+    color: var(--offwhite);
     position: absolute;
 }
 
@@ -636,15 +529,16 @@ body.show-chatbot .chatbot-toggler span:last-child {
     right: 35px;
     bottom: 90px;
     width: 420px;
-    background: #fff;
+    background: var(--offwhite);
     border-radius: 15px;
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.5);
     transform-origin: bottom right;
-    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 128px 0 var(--shadow), 0 32px 64px -48px var(--shadow);
     transition: all 0.1s ease;
+    z-index: 20;
 }
 
 body.show-chatbot .chatbot {
@@ -657,9 +551,9 @@ body.show-chatbot .chatbot {
     padding: 16px 0;
     position: relative;
     text-align: center;
-    color: #fff;
-    background: #724ae8;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: var(--offwhite);
+    background: var(--cyan);
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 .chatbot header span {
@@ -685,13 +579,9 @@ header h2 {
     width: 6px;
 }
 
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
-    background: #fff;
-    border-radius: 25px;
-}
-
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track,
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: var(--offwhite);
     border-radius: 25px;
 }
 
@@ -708,12 +598,12 @@ header h2 {
 .chatbox .incoming span {
     width: 32px;
     height: 32px;
-    color: #fff;
+    color: var(--offwhite);
     cursor: default;
     text-align: center;
     line-height: 32px;
     align-self: flex-end;
-    background: #724ae8;
+    background: var(--cyan);
     border-radius: 4px;
     margin: 0 10px 7px 0;
 }
@@ -723,9 +613,9 @@ header h2 {
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
     max-width: 75%;
-    color: #fff;
+    color: var(--offwhite);
     font-size: 0.95rem;
-    background: #724ae8;
+    background: var(--cyan);
 }
 
 .chatbox .incoming p {
@@ -733,13 +623,13 @@ header h2 {
 }
 
 .chatbox .chat p.error {
-    color: #721c24;
-    background: #f8d7da;
+    color: #d10519;
+    background: var(--dark);
 }
 
 .chatbox .incoming p {
-    color: #000;
-    background: #f2f2f2;
+    color: var(--cyan);
+    background: var(--green);
 }
 
 .chatbot .chat-input {
@@ -748,9 +638,9 @@ header h2 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #fff;
+    background: var(--cyan);
     padding: 3px 20px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--cyan);
 }
 
 .chat-input textarea {
@@ -762,11 +652,13 @@ header h2 {
     max-height: 180px;
     padding: 15px 15px 15px 0;
     font-size: 0.95rem;
+    background-color: var(--cyan);
+    color: var(--offwhite);
 }
 
 .chat-input span {
     align-self: flex-end;
-    color: #724ae8;
+    color: var(--offwhite);
     cursor: pointer;
     height: 55px;
     display: flex;
@@ -806,6 +698,7 @@ header h2 {
         display: block;
     }
 }
+
 /* Admin Dashboard */
 .gateButton {
     width: 12rem;
@@ -821,7 +714,8 @@ header h2 {
     cursor: pointer;
     transform: translateY(-3px);
 }
-.gateText{
+
+.gateText {
     color: var(--cyan);
     font-size: 130%;
     margin: 1rem;
