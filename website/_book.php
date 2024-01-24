@@ -99,35 +99,34 @@
         <ul class="cart-items">
         </ul>
 
-        <div class="cart-math">
-            <p>Add items to cart</p>
+            <div class="cart-math">
+                <p>Add items to cart</p>
+            </div>
+        </div>
+    </section>
+    <!-- Chatbox and chatbot -->
+    <div class="chatBot">
+        <script type="module" src="wwwroot/js/chat.js" defer></script>
+        <script type="javascript" src="wwwroot/js/converted.js" defer></script>
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>BertBot</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi! Ik ben jouw camping chatbot.<br>Ik kan jouw helpen met het kiezen van de juiste plek en eventuele andere vragen.<br><br>Hoe kan ik je noemen?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
         </div>
     </div>
-</section>
-<!-- Chatbox and chatbot -->
-<div class="chatBot">
-    <script src="wwwroot/js/chat.js" defer></script>
-    <button class="chatbot-toggler">
-        <span class="material-symbols-rounded">mode_comment</span>
-        <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-        <header>
-            <h2>Chatbot</h2>
-            <span class="close-btn material-symbols-outlined">close</span>
-        </header>
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <p>Hi there! How can I help you today?</p>
-            </li>
-        </ul>
-        <div class="chat-input">
-            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-            <span id="send-btn" class="material-symbols-rounded">send</span>
-        </div>
-    </div>
-</div>
 </body>
-
-</html>

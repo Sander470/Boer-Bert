@@ -1,0 +1,96 @@
+{
+  "questions": [
+    {
+      "question": "Hallo",
+      "answer": "Hoi!"
+    },
+    {
+      "question": "Hoe gaat het?",
+      "answer": "Het gaat goed, en met jou?"
+    },
+    {
+      "question": "Ook heel goed",
+      "answer": "Top!"
+    },
+    {
+      "question": "activiteiten",
+      "answer": "We hebben geplande wandeltochten, kampvuuravonden en een wekelijks barbecue-evenement."
+    },
+    {
+      "question": "WiFi",
+      "answer": "We bieden WiFi op de camping. Het wachtwoord vindt u op de informatiebrochure bij het inchecken."
+    },
+    {
+      "question": "kampvuren",
+      "answer": "Er zijn aangewezen gebieden voor kampvuren. Zorg ervoor dat u zich aan de regels houdt en vraag bij de receptie naar brandhout."
+    },
+    {
+      "question": "campingbeheerder",
+      "answer": "In geval van nood kunt u altijd de receptie bellen. Voor dringende zaken zijn we 24/7 bereikbaar."
+    },
+    {
+      "question": "barbecue",
+      "answer": "U kunt uw eigen barbecue meenemen. Zorg ervoor dat u deze op een veilige afstand van de tenten plaatst."
+    },
+    {
+      "question": "incheck- en uitchecktijden",
+      "answer": "De inchecktijd is vanaf 14:00 uur en de uitchecktijd is uiterlijk 11:00 uur."
+    },
+    {
+      "question": "regels voor het gebruik van het zwembad",
+      "answer": "Ja, het zwembad heeft specifieke openingstijden en er gelden regels voor veiligheid en hygiene."
+    },
+    {
+      "question": "supermarkten",
+      "answer": "Er zijn supermarkten en winkels op korte afstand van de camping. We kunnen u voorzien van een lijst met aanbevolen winkels."
+    },
+    {
+      "question": "recreatieve activiteiten",
+      "answer": "We hebben speelvoorzieningen en organiseren speciale activiteiten voor kinderen. Bekijk onze evenementenkalender voor meer informatie."
+    },
+    {
+      "question": "wasfaciliteiten",
+      "answer": "We hebben wasfaciliteiten met wasmachines en drogers voor gasten."
+    },
+    {
+      "question": "brandhout",
+      "answer": "We bieden brandhout aan voor kampvuren. U kunt het bij de receptie aanschaffen."
+    },
+    {
+      "question": "reserveren?",
+      "answer": "U kunt activiteiten vooraf reserveren via ons online portaal of bij de receptie bij aankomst."
+    },
+    {
+      "question": "kortingen",
+      "answer": "We bieden kortingen voor kinderen en senioren. Informeer bij de receptie voor de actuele prijzen en kortingen."
+    },
+    {
+      "question": "excursies",
+      "answer": "We organiseren excursies naar nabijgelegen bezienswaardigheden. Informeer bij de receptie voor het huidige excursieaanbod."
+    },
+    {
+      "question": "thema-avonden",
+      "answer": "We organiseren regelmatig thema-avonden en evenementen op de camping. Bekijk onze evenementenkalender voor meer informatie."
+    },
+    {
+      "question": "hoi",
+      "answer": "hallo!"
+    },
+    {
+      "question": "toiletten",
+      "answer": "Er zijn er op dit moment 9 toiletten op de camping."
+    },
+    {
+      "question": "zwembad",
+      "answer": "Er is een zwembad beschrikbaar op de camping!"
+    },
+    {
+      "question": "fietspomp",
+      "answer": "Er is een fietspomp aanwezig, mocht je een lekke band hebben dan kan je altijd langs de receptie!"
+    },
+    {
+      "question": "kinderen",
+      "answer": "Wij zijn een familie vriendelijke camping, kinderen zijn altijd welkom!"
+    }
+  ]
+}
